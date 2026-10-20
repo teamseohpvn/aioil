@@ -1,0 +1,3817 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI OIL | Dầu Thủy Lực Thế Hệ Mới - Kết Tinh Trí Tuệ Nhân Tạo</title>
+  <meta name="description" content="AI OIL - Đột phá dầu thủy lực thế hệ mới ứng dụng Trí Tuệ Nhân Tạo (AI) tối ưu cấu trúc phân tử, tăng tuổi thọ thiết bị gấp 3 lần và chống mài mòn cực hạn.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+/* ==========================================================================
+   AI OIL - NEXT-GEN HYDRAULIC OIL STYLESHEET
+   Google Gemini Aesthetic: Cosmic Tech Dark, Liquid Iridescent Glows,
+   Glassmorphism, High-Precision Industrial Luxury
+   ========================================================================== */
+
+:root {
+  --bg-dark: #06080e;
+  --bg-card: rgba(13, 18, 30, 0.72);
+  --bg-card-hover: rgba(20, 28, 48, 0.85);
+  --bg-glass: rgba(255, 255, 255, 0.03);
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-glow-cyan: rgba(64, 219, 255, 0.35);
+  --border-glow-gold: rgba(245, 179, 1, 0.4);
+
+  /* Brand Accents */
+  --cyan-core: #40dbff;
+  --cyan-bright: #6ce5ff;
+  --gold-core: #f5b301;
+  --gold-light: #ffd566;
+  --amber-dark: #ff8c00;
+  --purple-gemini: #8a5cff;
+  --green-neon: #10f49c;
+
+  /* Typography */
+  --text-main: #f0f4fc;
+  --text-muted: #8e9bb5;
+  --text-dim: #5c6780;
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', var(--font-sans);
+
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease-out;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+body.intro-active {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* ==========================================================================
+   INTRO SCREEN & GEMINI PARTICLES CANVAS
+   ========================================================================== */
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: radial-gradient(circle at 50% 50%, #0d1222 0%, #06080e 85%, #020306 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1.2s cubic-bezier(0.65, 0, 0.35, 1), visibility 1.2s ease;
+}
+
+.intro-overlay.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#intro-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+}
+
+.intro-hud {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  max-width: 900px;
+  pointer-events: none;
+}
+
+.intro-tagline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+  background: rgba(64, 219, 255, 0.08);
+  border: 1px solid rgba(64, 219, 255, 0.25);
+  backdrop-filter: blur(8px);
+  margin-bottom: 2rem;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--cyan-core);
+  text-transform: uppercase;
+  animation: pulse-tag 3s infinite alternate;
+}
+
+@keyframes pulse-tag {
+  0% { box-shadow: 0 0 10px rgba(64, 219, 255, 0.15); }
+  100% { box-shadow: 0 0 25px rgba(64, 219, 255, 0.4); }
+}
+
+.pulsing-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cyan-core);
+  box-shadow: 0 0 8px var(--cyan-core);
+  animation: blink 1.2s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+/* LETTERS CONTAINER A -> I -> O -> I -> L */
+.intro-letter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  perspective: 1000px;
+}
+
+.letter-spacer {
+  width: 2rem;
+}
+
+.letter-slot {
+  position: relative;
+  width: 70px;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 5rem;
+  font-weight: 800;
+  color: transparent;
+  text-shadow: 0 0 30px rgba(64, 219, 255, 0);
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0.15;
+  transform: scale(0.7) translateY(20px);
+}
+
+.letter-slot .char {
+  background: linear-gradient(135deg, #ffffff 10%, #6ce5ff 50%, #f5b301 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 0 20px rgba(64, 219, 255, 0.5));
+}
+
+.letter-slot.converging {
+  opacity: 0.8;
+  transform: scale(1.15) translateY(0);
+  filter: blur(2px);
+}
+
+.letter-slot.crystallized {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: blur(0px);
+  animation: letter-bloom 0.8s ease-out forwards;
+}
+
+.letter-slot.crystallized .glow-halo {
+  position: absolute;
+  inset: -15px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(64, 219, 255, 0.35) 0%, rgba(245, 179, 1, 0.15) 50%, transparent 70%);
+  animation: halo-radiate 1.5s infinite alternate ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes letter-bloom {
+  0% { transform: scale(1.4); filter: brightness(2.5) blur(4px); }
+  100% { transform: scale(1); filter: brightness(1) blur(0); }
+}
+
+@keyframes halo-radiate {
+  0% { opacity: 0.4; transform: scale(0.9); }
+  100% { opacity: 0.9; transform: scale(1.2); }
+}
+
+.intro-sub-message {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  max-width: 600px;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 1s ease 0.3s;
+}
+
+.intro-sub-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro-progress-bar {
+  width: 240px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  margin-top: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.intro-progress-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--cyan-core), var(--gold-core), var(--purple-gemini));
+  border-radius: 3px;
+  box-shadow: 0 0 12px var(--cyan-core);
+  transition: width 0.3s ease;
+}
+
+.intro-actions {
+  position: absolute;
+  bottom: 2.5rem;
+  z-index: 20;
+  display: flex;
+  gap: 1.2rem;
+  pointer-events: auto;
+}
+
+.control-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.3rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(13, 18, 30, 0.7);
+  backdrop-filter: blur(12px);
+  color: var(--text-main);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.control-btn:hover {
+  background: rgba(30, 42, 68, 0.8);
+  border-color: var(--cyan-core);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(64, 219, 255, 0.2);
+}
+
+.control-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.skip-btn {
+  background: linear-gradient(135deg, rgba(64, 219, 255, 0.2), rgba(245, 179, 1, 0.15));
+  border-color: rgba(64, 219, 255, 0.3);
+}
+
+.skip-btn:hover {
+  border-color: var(--gold-core);
+  box-shadow: 0 6px 25px rgba(245, 179, 1, 0.3);
+}
+
+/* ==========================================================================
+   MAIN SITE CONTAINER & BACKGROUND
+   ========================================================================== */
+.main-site {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.main-site.hidden-initially {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#ambient-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.65;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(6, 8, 14, 0.75);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: var(--transition-fast);
+}
+
+.site-header.scrolled {
+  background: rgba(6, 8, 14, 0.92);
+  border-bottom-color: rgba(64, 219, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.header-inner {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.logo-core {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--cyan-core);
+  box-shadow: 0 0 12px var(--cyan-core);
+  animation: spin 10s linear infinite;
+}
+
+.logo-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold-core);
+  box-shadow: 0 0 10px var(--gold-core);
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.brand-text {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.brand-text strong {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold-core));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.badge-tech {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  background: rgba(64, 219, 255, 0.12);
+  border: 1px solid rgba(64, 219, 255, 0.3);
+  color: var(--cyan-core);
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: var(--transition-fast);
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--text-main);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cyan-core), var(--gold-core));
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.btn-ghost:hover {
+  color: var(--cyan-core);
+  border-color: var(--cyan-core);
+  background: rgba(64, 219, 255, 0.05);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #1aa4db 0%, #2979ff 50%, #f59e0b 150%);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(41, 121, 255, 0.35);
+  transition: var(--transition-fast);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(64, 219, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-main);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--gold-core);
+  transform: translateY(-2px);
+}
+
+.btn-large {
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+}
+
+.glow-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-button::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 60%);
+  opacity: 0;
+  transform: rotate(45deg);
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.glow-button:hover::after {
+  opacity: 1;
+}
+
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--text-main);
+  transition: var(--transition-fast);
+}
+
+.mobile-drawer {
+  display: none;
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero-section {
+  padding-top: 150px;
+  padding-bottom: 90px;
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  background: rgba(245, 179, 1, 0.08);
+  border: 1px solid rgba(245, 179, 1, 0.25);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+}
+
+.badge-spark {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold-core);
+  box-shadow: 0 0 10px var(--gold-core);
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 3.6rem;
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 10%, #6ce5ff 45%, #f5b301 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 620px;
+  margin-bottom: 2.5rem;
+}
+
+.hero-description strong {
+  color: var(--gold-light);
+}
+
+.hero-stats-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: rgba(13, 18, 30, 0.6);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(12px);
+  margin-bottom: 2.5rem;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-card .stat-num {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+
+.stat-card .stat-unit {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--gold-core);
+  margin-left: 2px;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-top: 0.4rem;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* 3D OIL ORB & NEURAL OVERLAY */
+.hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orb-container {
+  position: relative;
+  width: 440px;
+  height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.oil-core-glow {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 179, 1, 0.3) 0%, rgba(64, 219, 255, 0.15) 45%, transparent 70%);
+  filter: blur(40px);
+  animation: float-glow 6s ease-in-out infinite alternate;
+}
+
+@keyframes float-glow {
+  0% { transform: scale(0.9) rotate(0deg); opacity: 0.6; }
+  100% { transform: scale(1.15) rotate(180deg); opacity: 0.95; }
+}
+
+.oil-droplet-3d {
+  position: relative;
+  width: 290px;
+  height: 290px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background: radial-gradient(circle at 35% 30%, #ffd976 0%, #e69d00 35%, #8f4c00 70%, #150901 100%);
+  box-shadow: 
+    inset -15px -15px 40px rgba(0, 0, 0, 0.8),
+    inset 15px 15px 35px rgba(255, 240, 180, 0.6),
+    0 25px 60px rgba(0, 0, 0, 0.7),
+    0 0 50px rgba(245, 179, 1, 0.45);
+  animation: droplet-morph 8s ease-in-out infinite alternate;
+  overflow: hidden;
+}
+
+@keyframes droplet-morph {
+  0% {
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    border-radius: 48% 52% 44% 56% / 54% 46% 54% 46%;
+    transform: translateY(-12px) rotate(4deg);
+  }
+  100% {
+    border-radius: 54% 46% 58% 42% / 46% 54% 46% 54%;
+    transform: translateY(6px) rotate(-3deg);
+  }
+}
+
+.droplet-specular {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  width: 80px;
+  height: 45px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0) 80%);
+  transform: rotate(-30deg);
+  filter: blur(1px);
+}
+
+.neural-nodes-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.neural-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.node {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 15px var(--cyan-core), 0 0 30px var(--cyan-core);
+  animation: node-pulse 2s infinite alternate;
+}
+
+.node.n1 { top: 28%; left: 18%; background: var(--cyan-core); }
+.node.n2 { top: 48%; left: 54%; background: var(--gold-light); animation-delay: 0.5s; }
+.node.n3 { top: 76%; left: 62%; background: var(--cyan-bright); animation-delay: 1s; }
+.node.n4 { top: 70%; left: 30%; background: #fff; animation-delay: 1.5s; }
+
+@keyframes node-pulse {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  100% { transform: scale(1.4); opacity: 1; }
+}
+
+/* FLOATING GLASS BADGES */
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 18px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: var(--transition-smooth);
+}
+
+.floating-badge {
+  position: absolute;
+  padding: 0.75rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  z-index: 15;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+.badge-top-right {
+  top: 15px;
+  right: -20px;
+  border-color: rgba(64, 219, 255, 0.3);
+  animation: float-badge 5s ease-in-out infinite alternate;
+}
+
+.badge-bottom-left {
+  bottom: 20px;
+  left: -25px;
+  border-color: rgba(245, 179, 1, 0.35);
+  animation: float-badge 6s ease-in-out 1s infinite alternate-reverse;
+}
+
+@keyframes float-badge {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+.f-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-pulse {
+  background: rgba(64, 219, 255, 0.15);
+  border: 1px solid var(--cyan-core);
+  box-shadow: 0 0 12px rgba(64, 219, 255, 0.4);
+}
+
+.oil-drop-icon {
+  background: rgba(245, 179, 1, 0.15);
+  border: 1px solid var(--gold-core);
+  box-shadow: 0 0 12px rgba(245, 179, 1, 0.4);
+}
+
+.f-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.f-sub {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   GENERAL SECTIONS
+   ========================================================================== */
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-header {
+  max-width: 780px;
+  margin: 0 auto 4rem auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.sub-heading {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cyan-core);
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 1.2rem;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   SECTION: ABOUT / TECH PILLARS
+   ========================================================================== */
+.grid-3-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.tech-card {
+  padding: 2.5rem 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(64, 219, 255, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(64, 219, 255, 0.15);
+}
+
+.highlight-card {
+  border-color: rgba(245, 179, 1, 0.4);
+  background: linear-gradient(180deg, rgba(20, 26, 44, 0.85) 0%, rgba(13, 18, 30, 0.75) 100%);
+}
+
+.card-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  background: var(--gold-core);
+  color: #000;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.tech-card-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.tech-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.check-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.check-list li {
+  font-size: 0.88rem;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.check-list li::before {
+  content: '✓';
+  color: var(--cyan-core);
+  font-weight: 800;
+}
+
+/* ==========================================================================
+   SIMULATOR SECTION
+   ========================================================================== */
+.simulator-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 2.5rem;
+  padding: 2.5rem;
+  border-radius: 24px;
+}
+
+.simulator-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.slider-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.slider-label strong {
+  color: var(--cyan-bright);
+  font-size: 1.1rem;
+  font-family: var(--font-display);
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--gold-core);
+  box-shadow: 0 0 15px var(--gold-core);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+}
+
+.slider-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--text-dim);
+}
+
+.grade-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+
+.btn-grade {
+  padding: 0.6rem 0.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.btn-grade.active, .btn-grade:hover {
+  background: rgba(64, 219, 255, 0.12);
+  border-color: var(--cyan-core);
+  color: #fff;
+}
+
+.realtime-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.metric-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.m-label {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  margin-bottom: 0.3rem;
+}
+
+.m-val {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.highlight-gold { color: var(--gold-core); }
+.highlight-cyan { color: var(--cyan-core); }
+.text-green { color: var(--green-neon); }
+
+.simulator-canvas-container {
+  display: flex;
+  flex-direction: column;
+  background: #04060a;
+  border-radius: 16px;
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.sim-view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.78rem;
+}
+
+.sim-live-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--cyan-core);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.sim-pulse {
+  width: 6px;
+  height: 6px;
+  background: var(--green-neon);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--green-neon);
+}
+
+.view-compare-toggle label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+#sim-canvas {
+  width: 100%;
+  height: 320px;
+  display: block;
+}
+
+.sim-legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.8rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.leg-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dot-ai {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold-core);
+  box-shadow: 0 0 8px var(--gold-core);
+}
+
+.dot-normal {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff4757;
+  box-shadow: 0 0 8px #ff4757;
+}
+
+/* ==========================================================================
+   ADVANTAGES SECTION (4 PILLARS)
+   ========================================================================== */
+.adv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.adv-item {
+  display: flex;
+  gap: 1.8rem;
+  padding: 2.5rem;
+}
+
+.adv-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(64, 219, 255, 0.3);
+}
+
+.adv-number {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(64, 219, 255, 0.25);
+  line-height: 1;
+}
+
+.adv-content h4 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+
+.adv-content p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 1.2rem;
+}
+
+.adv-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: rgba(245, 179, 1, 0.1);
+  color: var(--gold-light);
+  border: 1px solid rgba(245, 179, 1, 0.25);
+}
+
+/* ==========================================================================
+   PRODUCT SHOWCASE & BOTTLE RENDERS
+   ========================================================================== */
+.product-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.product-card {
+  padding: 2.5rem 1.8rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(64, 219, 255, 0.4);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(64, 219, 255, 0.15);
+}
+
+.featured-product {
+  border-color: var(--gold-core);
+  box-shadow: 0 20px 45px rgba(245, 179, 1, 0.15);
+  background: linear-gradient(180deg, rgba(22, 28, 48, 0.85) 0%, rgba(13, 18, 30, 0.8) 100%);
+}
+
+.product-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--cyan-core);
+  background: rgba(64, 219, 255, 0.1);
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(64, 219, 255, 0.2);
+}
+
+.product-badge.top-pick {
+  color: #000;
+  background: var(--gold-core);
+  border-color: var(--gold-light);
+  font-weight: 800;
+}
+
+.bottle-render {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.bottle-mockup {
+  position: relative;
+  width: 100px;
+  height: 170px;
+  border-radius: 18px 18px 24px 24px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(10, 15, 28, 0.9) 60%);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .bottle-mockup {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+.bottle-mockup::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  width: 38px;
+  height: 16px;
+  border-radius: 4px 4px 0 0;
+  background: #202b42;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bottle-glow {
+  position: absolute;
+  inset: 10px;
+  border-radius: 12px;
+  filter: blur(10px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.b-32 .bottle-glow { background: rgba(64, 219, 255, 0.6); }
+.b-46 .bottle-glow { background: rgba(245, 179, 1, 0.7); }
+.b-68 .bottle-glow { background: rgba(255, 145, 0, 0.6); }
+
+.bottle-label {
+  position: relative;
+  z-index: 2;
+  width: 82%;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.4rem;
+}
+
+.lbl-brand {
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: var(--cyan-core);
+  letter-spacing: 0.05em;
+}
+
+.lbl-grade {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 2px 0;
+}
+
+.lbl-tech {
+  font-size: 0.5rem;
+  color: var(--gold-light);
+  letter-spacing: 0.05em;
+}
+
+.product-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.6rem;
+}
+
+.product-role {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  min-height: 58px;
+}
+
+.spec-mini-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.spec-mini-list div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.spec-mini-list strong {
+  color: var(--text-main);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--cyan-core);
+  border: 1px solid rgba(64, 219, 255, 0.4);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.btn-outline:hover {
+  background: rgba(64, 219, 255, 0.12);
+  border-color: var(--cyan-core);
+  box-shadow: 0 4px 20px rgba(64, 219, 255, 0.25);
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* COMPARISON TABLE */
+.comparison-block {
+  margin-top: 2rem;
+}
+
+.table-headline {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.92rem;
+}
+
+.spec-table th, .spec-table td {
+  padding: 1.2rem 1.4rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.spec-table th {
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.spec-table tr:last-child td {
+  border-bottom: none;
+}
+
+.col-highlight {
+  background: rgba(245, 179, 1, 0.04);
+  color: var(--gold-light);
+  border-left: 1px solid rgba(245, 179, 1, 0.15);
+  border-right: 1px solid rgba(245, 179, 1, 0.15);
+}
+
+.spec-table td strong {
+  color: #fff;
+}
+
+/* ==========================================================================
+   ROI CALCULATOR SECTION
+   ========================================================================== */
+.roi-box {
+  padding: 3.5rem;
+  border-radius: 28px;
+  border-color: rgba(64, 219, 255, 0.25);
+  background: linear-gradient(135deg, rgba(13, 20, 36, 0.85) 0%, rgba(8, 12, 22, 0.9) 100%);
+}
+
+.roi-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 3rem auto;
+}
+
+.roi-header h3 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+
+.roi-header p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+.roi-calculator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.calc-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.calc-field label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.input-with-stepper {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 0.6rem 1rem;
+}
+
+.input-with-stepper input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  width: 100%;
+  outline: none;
+}
+
+.input-with-stepper span {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.calc-results {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.res-card {
+  padding: 1.2rem 1.5rem;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.res-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.res-val {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--cyan-core);
+}
+
+.res-total {
+  padding: 1.8rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(245, 179, 1, 0.15) 0%, rgba(64, 219, 255, 0.1) 100%);
+  border: 1px solid var(--gold-core);
+  text-align: center;
+}
+
+.res-total-val {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--gold-light);
+  margin: 0.5rem 0;
+  text-shadow: 0 0 25px rgba(245, 179, 1, 0.4);
+}
+
+.res-note {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  display: block;
+}
+
+/* ==========================================================================
+   CONTACT SECTION & FORM
+   ========================================================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.contact-info .section-title {
+  font-size: 2.3rem;
+}
+
+.contact-info > p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.contact-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.perk-item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.p-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(64, 219, 255, 0.08);
+  border: 1px solid rgba(64, 219, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.perk-item strong {
+  display: block;
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+
+.perk-item p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.contact-form-box {
+  padding: 3rem;
+  border-radius: 24px;
+}
+
+.contact-form-box h3 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.8rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-subtle);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  border-color: var(--cyan-core);
+  box-shadow: 0 0 15px rgba(64, 219, 255, 0.25);
+}
+
+.form-group select option {
+  background: #0a0e1a;
+  color: #fff;
+}
+
+.form-success-alert {
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  border-radius: 12px;
+  background: rgba(16, 244, 156, 0.1);
+  border: 1px solid var(--green-neon);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.alert-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--green-neon);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.site-footer {
+  border-top: 1px solid var(--border-subtle);
+  background: #030408;
+  padding: 80px 0 30px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.footer-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 1.2rem 0;
+  max-width: 340px;
+}
+
+.tech-compliance {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+.footer-col h5 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.2rem;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: 0.6rem;
+  transition: var(--transition-fast);
+}
+
+.footer-col a:hover {
+  color: var(--cyan-core);
+  transform: translateX(4px);
+}
+
+.footer-col p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: var(--text-dim);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================================================== */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (TABLETS & PHONES)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hero-description {
+    margin: 0 auto 2.5rem auto;
+  }
+
+  .hero-stats-strip {
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .grid-3-cards, .product-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .simulator-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .roi-calculator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .mobile-drawer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background: #080c16;
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 1.5rem;
+    gap: 1rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-fast);
+  }
+
+  .mobile-drawer.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mob-link {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .letter-slot {
+    width: 48px;
+    height: 70px;
+    font-size: 3.2rem;
+  }
+
+  .letter-spacer {
+    width: 1rem;
+  }
+
+  .hero-stats-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-box, .roi-box {
+    padding: 1.8rem;
+  }
+}
+
+</style>
+</head>
+<body class="intro-active">
+
+  <!-- ==================== GEMINI INTRO OVERLAY ==================== -->
+  <div id="intro-screen" class="intro-overlay" aria-label="Màn hình mở đầu AI OIL">
+    <!-- Particle Canvas for Gemini Fluid Glow Effect -->
+    <canvas id="intro-canvas"></canvas>
+
+    <!-- Center Stage Typography HUD -->
+    <div class="intro-hud">
+      <div class="intro-tagline" id="intro-tagline">
+        <span class="pulsing-dot"></span>
+        <span class="tag-text">SYNTHESIZING NEXT-GEN FORMULA</span>
+      </div>
+
+      <div class="intro-letter-container" id="intro-letter-container">
+        <!-- Rendered letters during formation -->
+        <div class="letter-slot" data-char="A"><span class="char">A</span><div class="glow-halo"></div></div>
+        <div class="letter-slot" data-char="I"><span class="char">I</span><div class="glow-halo"></div></div>
+        <div class="letter-spacer"></div>
+        <div class="letter-slot" data-char="O"><span class="char">O</span><div class="glow-halo"></div></div>
+        <div class="letter-slot" data-char="I"><span class="char">I</span><div class="glow-halo"></div></div>
+        <div class="letter-slot" data-char="L"><span class="char">L</span><div class="glow-halo"></div></div>
+      </div>
+
+      <div class="intro-sub-message" id="intro-sub-message">
+        Áp dụng trí tuệ nhân tạo vào kết tinh những ưu điểm tốt nhất
+      </div>
+
+      <div class="intro-progress-bar">
+        <div class="intro-progress-fill" id="intro-progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- Intro Control Actions -->
+    <div class="intro-actions">
+      <button id="btn-sound-toggle" class="control-btn" title="Bật/Tắt âm thanh tương tác">
+        <svg class="icon-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+        <svg class="icon-sound-off hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+        <span>Âm thanh AI</span>
+      </button>
+      <button id="btn-skip-intro" class="control-btn skip-btn" title="Bỏ qua hiệu ứng giới thiệu">
+        <span>Vào trang chủ</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN SITE CONTAINER ==================== -->
+  <div id="main-site" class="main-site hidden-initially">
+
+    <!-- Background ambient Canvas for main site (Liquid Gold & Neural Aurora) -->
+    <canvas id="ambient-canvas"></canvas>
+
+    <!-- NAVIGATION HEADER -->
+    <header class="site-header" id="site-header">
+      <div class="header-inner container">
+        <a href="#hero" class="brand-logo" id="brand-logo">
+          <div class="logo-core">
+            <span class="logo-ring"></span>
+            <span class="logo-dot"></span>
+          </div>
+          <span class="brand-text">AI <strong>OIL</strong></span>
+          <span class="badge-tech">GEN-4</span>
+        </a>
+
+        <nav class="desktop-nav" id="desktop-nav">
+          <a href="#about" class="nav-link">Công Nghệ AI</a>
+          <a href="#advantages" class="nav-link">Ưu Điểm Vượt Trội</a>
+          <a href="#simulation" class="nav-link">Phòng Thí Nghiệm Ảo</a>
+          <a href="#products" class="nav-link">Dòng Sản Phẩm</a>
+          <a href="#specs" class="nav-link">Thông Số Kỹ Thuật</a>
+        </nav>
+
+        <div class="header-actions">
+          <button id="btn-replay-intro" class="btn-ghost" title="Xem lại màn hội tụ hạt Gemini">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+            <span>Hiệu ứng Gemini</span>
+          </button>
+          <a href="#contact" class="btn-primary glow-button">
+            <span>Nhận Báo Giá & Mẫu</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Mở menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Nav Drawer -->
+      <div class="mobile-drawer" id="mobile-drawer">
+        <a href="#about" class="mob-link">Công Nghệ AI</a>
+        <a href="#advantages" class="mob-link">Ưu Điểm Vượt Trội</a>
+        <a href="#simulation" class="mob-link">Phòng Thí Nghiệm Ảo</a>
+        <a href="#products" class="mob-link">Dòng Sản Phẩm</a>
+        <a href="#specs" class="mob-link">Thông Số Kỹ Thuật</a>
+        <a href="#contact" class="btn-primary w-full text-center">Liên Hệ Thử Mẫu</a>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <main>
+      <section id="hero" class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge reveal-item">
+              <span class="badge-spark"></span>
+              <span>KỶ NGUYÊN MỚI CỦA DẦU THỦY LỰC CÔNG NGHIỆP</span>
+            </div>
+
+            <h1 class="hero-title reveal-item">
+              Kết Tinh Trí Tuệ Nhân Tạo <br>
+              <span class="gradient-text">Vào Công Thức Dầu AI OIL</span>
+            </h1>
+
+            <p class="hero-description reveal-item">
+              Đột phá bôi trơn thủy lực thế hệ mới: Thuật toán máy học lượng tử phân tích hàng triệu biến số phân tử, 
+              chọn lọc và kết tinh những phẩm cấp cơ học - nhiệt học hoàn hảo nhất vào từng giọt dầu <strong>AI OIL</strong>.
+            </p>
+
+            <div class="hero-stats-strip reveal-item">
+              <div class="stat-card">
+                <span class="stat-num" data-target="3">0</span><span class="stat-unit">X</span>
+                <span class="stat-label">Tuổi thọ dầu & bơm thủy lực</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num" data-target="38">0</span><span class="stat-unit">%</span>
+                <span class="stat-label">Giảm nhiệt ma sát cực hạn</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num" data-target="99.9">0</span><span class="stat-unit">%</span>
+                <span class="stat-label">Chống mài mòn Micro-Pitting</span>
+              </div>
+            </div>
+
+            <div class="hero-cta-group reveal-item">
+              <a href="#simulation" class="btn-primary btn-large glow-button">
+                <span>Khám phá công thức AI</span>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              </a>
+              <a href="#products" class="btn-secondary btn-large">
+                <span>Xem thông số VG 32/46/68</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal-item">
+            <div class="orb-container">
+              <div class="oil-core-glow"></div>
+              <div class="oil-droplet-3d">
+                <div class="droplet-surface"></div>
+                <div class="droplet-specular"></div>
+                <div class="neural-nodes-overlay">
+                  <span class="node n1" title="Nano Si-Polymer"></span>
+                  <span class="node n2" title="AI Viscosity Stabilizer"></span>
+                  <span class="node n3" title="Anti-Cavitation Matrix"></span>
+                  <span class="node n4" title="Thermal Shield 280°C"></span>
+                  <svg class="neural-lines" viewBox="0 0 300 300">
+                    <line x1="50" y1="80" x2="160" y2="140" stroke="rgba(245, 179, 1, 0.4)" stroke-width="1.5" stroke-dasharray="3,3"/>
+                    <line x1="160" y1="140" x2="240" y2="90" stroke="rgba(64, 219, 255, 0.5)" stroke-width="1.5"/>
+                    <line x1="160" y1="140" x2="190" y2="230" stroke="rgba(245, 179, 1, 0.4)" stroke-width="1.5"/>
+                    <line x1="50" y1="80" x2="90" y2="210" stroke="rgba(64, 219, 255, 0.3)" stroke-width="1.5"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Floating Live Data Cards -->
+              <div class="floating-badge badge-top-right glass-card">
+                <div class="f-icon ai-pulse"></div>
+                <div>
+                  <div class="f-title">AI Molecular Synthesis</div>
+                  <div class="f-sub">12,400,000 simulations/giây</div>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-bottom-left glass-card">
+                <div class="f-icon oil-drop-icon"></div>
+                <div>
+                  <div class="f-title">Chỉ số độ nhớt VI: 168</div>
+                  <div class="f-sub">Siêu ổn định ở áp suất 450 bar</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: ABOUT AI OIL TECHNOLOGY -->
+      <section id="about" class="section tech-story">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="sub-heading">TRIẾT LÝ PHÁT TRIỂN</span>
+            <h2 class="section-title">Tại Sao Phải Ứng Dụng AI Vào Công Thức Dầu Thủy Lực?</h2>
+            <p class="section-subtitle">
+              Các hệ thống thủy lực hiện đại làm việc ở áp lực siêu cao (>420 bar) và chu kỳ liên tục. Dầu khoáng và phụ gia truyền thống thường bị bẻ gãy mạch phân tử polymer. AI OIL giải quyết triệt để thách thức này.
+            </p>
+          </div>
+
+          <div class="grid-3-cards">
+            <div class="tech-card glass-card">
+              <div class="tech-card-icon">
+                <div class="icon-inner">🧬</div>
+              </div>
+              <h3>1. AI Mô Phỏng Động Học Phân Tử</h3>
+              <p>
+                Thay vì thử nghiệm mù mờ hàng năm trong phòng thí nghiệm, mô hình Deep Neural Network dự đoán chính xác phản ứng bẻ gãy phân tử hydrocacbon dưới áp lực cắt trượt siêu vi.
+              </p>
+              <ul class="check-list">
+                <li>Sàng lọc hơn 10 triệu biến thể phụ gia</li>
+                <li>Tạo liên kết nano chống bẻ gãy mạch</li>
+              </ul>
+            </div>
+
+            <div class="tech-card glass-card highlight-card">
+              <div class="tech-card-icon">
+                <div class="icon-inner">⚡</div>
+              </div>
+              <div class="card-badge">ĐỘT PHÁ LÕI</div>
+              <h3>2. Kết Tinh Ưu Điểm Cơ Lý Tối Thượng</h3>
+              <p>
+                AI OIL tự động tổng hợp ưu thế: Độ thoát khí cực nhanh của dầu ester tổng hợp + Khả năng bảo vệ bề mặt của gốc Polyalphaolefin (PAO) + Giá thành tối ưu cho công nghiệp nặng.
+              </p>
+              <ul class="check-list">
+                <li>Độ nhớt chuẩn xác tuyệt đối (±0.2 cSt)</li>
+                <li>Khử hiện tượng bọt khí sinh ra xâm thực (Cavitation)</li>
+              </ul>
+            </div>
+
+            <div class="tech-card glass-card">
+              <div class="tech-card-icon">
+                <div class="icon-inner">🛡️</div>
+              </div>
+              <h3>3. Màng Phân Tử Tự Tái Tạo Smart-Film</h3>
+              <p>
+                Dưới ma sát và nhiệt độ ma sát cao, các phân tử thông minh AI OIL phản ứng tức thời để tạo lớp gốm nano bảo vệ thành xilanh, piston và van servo, triệt tiêu hiện tượng dính trượt (stick-slip).
+              </p>
+              <ul class="check-list">
+                <li>Bảo vệ van Servo chính xác dưới 1 micron</li>
+                <li>Chống mài mòn cực áp chuẩn FZG Stage 13+</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: INTERACTIVE VIRTUAL LAB SIMULATOR -->
+      <section id="simulation" class="section lab-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="sub-heading">MÔ PHỎNG THỰC NGHIỆM</span>
+            <h2 class="section-title">Phòng Thí Nghiệm Động Học AI OIL</h2>
+            <p class="section-subtitle">
+              Điều chỉnh áp suất hệ thống và nhiệt độ môi trường để chứng kiến cách cấu trúc phân tử AI OIL giữ vững màng dầu so với dầu thủy lực thông thường.
+            </p>
+          </div>
+
+          <div class="simulator-wrapper glass-card">
+            <div class="simulator-controls">
+              <div class="control-group">
+                <div class="slider-label">
+                  <span>Áp suất vận hành (Operating Pressure):</span>
+                  <strong id="val-pressure">320 bar</strong>
+                </div>
+                <input type="range" id="input-pressure" min="50" max="500" value="320" step="10">
+                <div class="slider-ticks">
+                  <span>50 bar (Nhẹ)</span>
+                  <span>250 bar (Trung bình)</span>
+                  <span>500 bar (Cực hạn)</span>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <div class="slider-label">
+                  <span>Nhiệt độ dầu (Fluid Temperature):</span>
+                  <strong id="val-temp">75 °C</strong>
+                </div>
+                <input type="range" id="input-temp" min="-10" max="130" value="75" step="5">
+                <div class="slider-ticks">
+                  <span>-10 °C (Khởi động lạnh)</span>
+                  <span>65 °C (Tiêu chuẩn)</span>
+                  <span>130 °C (Khắc nghiệt)</span>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <span class="slider-label">Cấp độ nhớt thử nghiệm:</span>
+                <div class="grade-selector" id="grade-selector">
+                  <button class="btn-grade active" data-grade="32">AI OIL VG 32</button>
+                  <button class="btn-grade" data-grade="46">AI OIL VG 46</button>
+                  <button class="btn-grade" data-grade="68">AI OIL VG 68</button>
+                </div>
+              </div>
+
+              <div class="realtime-metrics">
+                <div class="metric-box">
+                  <span class="m-label">Độ ổn định màng dầu</span>
+                  <span class="m-val highlight-gold" id="metric-film">98.4%</span>
+                </div>
+                <div class="metric-box">
+                  <span class="m-label">Hao hụt năng lượng ma sát</span>
+                  <span class="m-val highlight-cyan" id="metric-friction">-28.5%</span>
+                </div>
+                <div class="metric-box">
+                  <span class="m-label">Tình trạng phân tử AI</span>
+                  <span class="m-val text-green" id="metric-status">Ổn Định Tối Đa</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="simulator-canvas-container">
+              <div class="sim-view-header">
+                <span class="sim-live-tag"><span class="sim-pulse"></span> SIMULATION VIEW (NANO 10⁻⁹m)</span>
+                <div class="view-compare-toggle">
+                  <label>
+                    <input type="checkbox" id="check-compare" checked>
+                    <span>So sánh với dầu thông thường</span>
+                  </label>
+                </div>
+              </div>
+              <canvas id="sim-canvas"></canvas>
+              <div class="sim-legend">
+                <span class="leg-item"><span class="dot-ai"></span> Phân tử AI OIL liên kết vững chắc</span>
+                <span class="leg-item"><span class="dot-normal"></span> Dầu thường bị xé rách màng dầu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: ADVANTAGES / 4 CỘT TRỤ VƯỢT TRỘI -->
+      <section id="advantages" class="section advantages-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="sub-heading">GIÁ TRỊ VƯỢT TRỘI</span>
+            <h2 class="section-title">4 Lợi Ích Vận Hành Doanh Nghiệp Nhận Được</h2>
+            <p class="section-subtitle">Tối ưu hóa chi phí bảo trì và bảo vệ trái tim của mọi dây chuyền sản xuất tự động.</p>
+          </div>
+
+          <div class="adv-grid">
+            <div class="adv-item glass-card">
+              <div class="adv-number">01</div>
+              <div class="adv-content">
+                <h4>Kéo Dài Chu Kỳ Thay Dầu Gấp 3 Lần</h4>
+                <p>Khả năng chống oxy hóa TOST (Turbine Oil Stability Test) vượt trên 8.000 giờ, hạn chế bùn cặn và keo dầu, giảm 65% chi phí thu hồi và tiêu hủy dầu thải.</p>
+                <div class="adv-tag">8.000+ Giờ Vận Hành</div>
+              </div>
+            </div>
+
+            <div class="adv-item glass-card">
+              <div class="adv-number">02</div>
+              <div class="adv-content">
+                <h4>Triệt Tiêu Xâm Thực & Bọt Khí (Air Release)</h4>
+                <p>Thuật toán AI tối ưu sức căng bề mặt giúp bọt khí tách khỏi dầu chỉ trong 2.5 phút (nhanh gấp 3 lần tiêu chuẩn ISO 9120), ngăn chặn hiện tượng cháy nổ vi mô làm rỗ mặt bơm.</p>
+                <div class="adv-tag">Tách Bọt < 2.5 Phút</div>
+              </div>
+            </div>
+
+            <div class="adv-item glass-card">
+              <div class="adv-number">03</div>
+              <div class="adv-content">
+                <h4>Tiết Kiệm Điện Năng Bơm Thủy Lực 5 - 8%</h4>
+                <p>Hệ số ma sát nội phân tử cực thấp giúp động cơ điện truyền động giảm tải dòng điện khởi động và tải liên tục, mang lại hàng trăm triệu đồng tiền điện mỗi năm cho nhà máy.</p>
+                <div class="adv-tag">Tiết Kiệm Điện 5-8%</div>
+              </div>
+            </div>
+
+            <div class="adv-item glass-card">
+              <div class="adv-number">04</div>
+              <div class="adv-content">
+                <h4>Tương Thích Mọi Loại Phốt & Gioăng Cao Su</h4>
+                <p>Chỉ số kiểm soát trương nở phốt (Seal Swell AI Control) bảo đảm gioăng NBR, Viton, FKM không bị co ngót hay chai cứng, loại bỏ hoàn toàn nguy cơ xì dầu rò rỉ áp lực.</p>
+                <div class="adv-tag">Bảo Vệ Gioăng Phốt 100%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: PRODUCT SPECIFICATIONS & COMPARISON -->
+      <section id="products" class="section product-lineup">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="sub-heading">DANH MỤC SẢN PHẨM</span>
+            <h2 class="section-title">Hệ Sinh Thái Dầu Thủy Lực AI OIL</h2>
+            <p class="section-subtitle">Đáp ứng chuẩn mực khắt khe nhất của Denison HF-0, HF-1, HF-2, Eaton Vickers M-2950-S và Bosch Rexroth.</p>
+          </div>
+
+          <div class="product-cards-grid">
+            <!-- Product 1: VG 32 -->
+            <div class="product-card glass-card">
+              <div class="product-badge">TỐC ĐỘ CAO</div>
+              <div class="bottle-render">
+                <div class="bottle-mockup b-32">
+                  <div class="bottle-glow"></div>
+                  <div class="bottle-label">
+                    <span class="lbl-brand">AI OIL</span>
+                    <span class="lbl-grade">HYDRO-X 32</span>
+                    <span class="lbl-tech">AI Quantum Formulated</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>AI OIL HYDRO-X 32</h3>
+                <p class="product-role">Dành cho máy CNC, cánh tay Robot, máy ép nhựa cao tốc & hệ thống thủy lực servo nhạy cảm.</p>
+                <div class="spec-mini-list">
+                  <div><span>Độ nhớt 40°C:</span> <strong>31.8 cSt</strong></div>
+                  <div><span>Chỉ số độ nhớt VI:</span> <strong>165</strong></div>
+                  <div><span>Điểm chớp cháy:</span> <strong>232 °C</strong></div>
+                  <div><span>Điểm đông đặc:</span> <strong>-36 °C</strong></div>
+                </div>
+                <button class="btn-outline w-full request-sample-btn" data-product="AI OIL HYDRO-X 32">Nhận Mẫu Thử Nghiệm</button>
+              </div>
+            </div>
+
+            <!-- Product 2: VG 46 (Featured) -->
+            <div class="product-card glass-card featured-product">
+              <div class="product-badge top-pick">ĐƯỢC TIN DÙNG NHẤT ★</div>
+              <div class="bottle-render">
+                <div class="bottle-mockup b-46">
+                  <div class="bottle-glow"></div>
+                  <div class="bottle-label">
+                    <span class="lbl-brand">AI OIL</span>
+                    <span class="lbl-grade">HYDRO-X 46</span>
+                    <span class="lbl-tech">AI Quantum Formulated</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>AI OIL HYDRO-X 46</h3>
+                <p class="product-role">Dòng dầu công nghiệp toàn năng: Máy ép kim loại, máy công trình máy đào Komatsu/Cat, máy đùn nhôm.</p>
+                <div class="spec-mini-list">
+                  <div><span>Độ nhớt 40°C:</span> <strong>46.2 cSt</strong></div>
+                  <div><span>Chỉ số độ nhớt VI:</span> <strong>168</strong></div>
+                  <div><span>Điểm chớp cháy:</span> <strong>240 °C</strong></div>
+                  <div><span>Điểm đông đặc:</span> <strong>-33 °C</strong></div>
+                </div>
+                <button class="btn-primary w-full glow-button request-sample-btn" data-product="AI OIL HYDRO-X 46">Nhận Mẫu Thử Nghiệm</button>
+              </div>
+            </div>
+
+            <!-- Product 3: VG 68 -->
+            <div class="product-card glass-card">
+              <div class="product-badge">TẢI NẶNG KHẮC NGHIỆT</div>
+              <div class="bottle-render">
+                <div class="bottle-mockup b-68">
+                  <div class="bottle-glow"></div>
+                  <div class="bottle-label">
+                    <span class="lbl-brand">AI OIL</span>
+                    <span class="lbl-grade">HYDRO-X 68</span>
+                    <span class="lbl-tech">AI Quantum Formulated</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>AI OIL HYDRO-X 68</h3>
+                <p class="product-role">Dành cho lò luyện kim, cẩu cảng biển, máy ép gạch thủy lực & thiết bị khai thác hầm mỏ tải cực đại.</p>
+                <div class="spec-mini-list">
+                  <div><span>Độ nhớt 40°C:</span> <strong>67.9 cSt</strong></div>
+                  <div><span>Chỉ số độ nhớt VI:</span> <strong>170</strong></div>
+                  <div><span>Điểm chớp cháy:</span> <strong>248 °C</strong></div>
+                  <div><span>Điểm đông đặc:</span> <strong>-30 °C</strong></div>
+                </div>
+                <button class="btn-outline w-full request-sample-btn" data-product="AI OIL HYDRO-X 68">Nhận Mẫu Thử Nghiệm</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPARISON TABLE -->
+          <div class="comparison-block" id="specs">
+            <h3 class="table-headline text-center">Bảng So Sánh Chỉ Tiêu Kỹ Thuật Chi Tiết</h3>
+            <div class="table-responsive glass-card">
+              <table class="spec-table">
+                <thead>
+                  <tr>
+                    <th>Chỉ tiêu kỹ thuật / Tiêu chuẩn</th>
+                    <th>Dầu Khoáng Thông Thường</th>
+                    <th class="col-highlight">AI OIL Thế Hệ Mới (AI-Formula)</th>
+                    <th>Lợi thế mang lại</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Chỉ số độ nhớt (Viscosity Index - VI)</strong> ASTM D2270</td>
+                    <td>95 - 105 (Dễ loãng khi nóng)</td>
+                    <td class="col-highlight"><strong>165 - 170 (Siêu ổn định)</strong></td>
+                    <td>Duy trì áp suất ổn định cả khi máy vận hành 24/7</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Thử nghiệm độ bền oxy hóa TOST</strong> ASTM D943</td>
+                    <td>2.000 - 2.500 Giờ</td>
+                    <td class="col-highlight"><strong>> 8.500 Giờ</strong></td>
+                    <td>Tuổi thọ gấp hơn 3.5 lần, chống sinh bùn cặn vón cục</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Thời gian khử bọt khí (Air Release)</strong> ISO 9120 (50°C)</td>
+                    <td>8 - 12 Phút</td>
+                    <td class="col-highlight"><strong>2.2 - 2.8 Phút</strong></td>
+                    <td>Triệt tiêu hiện tượng sủi bọt, chống giật rung xi lanh</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Khả năng tách nước (Demulsibility)</strong> ASTM D1401</td>
+                    <td>30 Phút (dễ nhũ hóa trắng đục)</td>
+                    <td class="col-highlight"><strong>10 Phút (tách nước hoàn toàn)</strong></td>
+                    <td>Bảo vệ hệ thống không bị rỉ sét khi hơi ẩm xâm nhập</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Cấp tải chống mài mòn bánh răng FZG</strong> DIN 51354-2</td>
+                    <td>Stage 10 - 11</td>
+                    <td class="col-highlight"><strong>Stage 13+ (Fail Stage Max)</strong></td>
+                    <td>Chống xước bề mặt bánh răng bơm và piston tối đa</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Độ bay hơi ma sát Noack</strong> ASTM D5800</td>
+                    <td>14 - 18%</td>
+                    <td class="col-highlight"><strong>< 4.5%</strong></td>
+                    <td>Không hao hụt dầu do bay hơi ở nhiệt độ làm việc cao</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: ROI CALCULATOR -->
+      <section class="section roi-section">
+        <div class="container">
+          <div class="roi-box glass-card">
+            <div class="roi-header">
+              <span class="sub-heading">HIỆU QUẢ KINH TẾ</span>
+              <h3>Tính Toán Chi Phí Tiết Kiệm Khi Chuyển Sang AI OIL</h3>
+              <p>Ước tính số tiền doanh nghiệp của bạn tiết kiệm được mỗi năm nhờ kéo dài chu kỳ thay dầu và giảm điện năng tiêu thụ.</p>
+            </div>
+
+            <div class="roi-calculator-grid">
+              <div class="calc-inputs">
+                <div class="calc-field">
+                  <label>Số lượng máy thủy lực trong nhà máy:</label>
+                  <div class="input-with-stepper">
+                    <input type="number" id="calc-machines" value="12" min="1" max="500">
+                    <span>máy</span>
+                  </div>
+                </div>
+
+                <div class="calc-field">
+                  <label>Dung tích bình dầu trung bình mỗi máy:</label>
+                  <div class="input-with-stepper">
+                    <input type="number" id="calc-tank" value="400" min="50" max="5000" step="50">
+                    <span>lít</span>
+                  </div>
+                </div>
+
+                <div class="calc-field">
+                  <label>Đơn giá điện trung bình (VNĐ/kWh):</label>
+                  <div class="input-with-stepper">
+                    <input type="number" id="calc-elec" value="2100" min="1000" max="5000" step="100">
+                    <span>đ/kWh</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-results">
+                <div class="res-card">
+                  <span class="res-label">Tiết kiệm chi phí dầu & lõi lọc:</span>
+                  <div class="res-val" id="roi-oil-savings">86.400.000 đ/năm</div>
+                </div>
+                <div class="res-card">
+                  <span class="res-label">Tiết kiệm điện năng bơm thủy lực (6%):</span>
+                  <div class="res-val" id="roi-elec-savings">120.960.000 đ/năm</div>
+                </div>
+                <div class="res-total">
+                  <span class="res-label">TỔNG LỢI ÍCH TIẾT KIỆM MỖI NĂM:</span>
+                  <div class="res-total-val" id="roi-total-savings">207.360.000 VNĐ</div>
+                  <span class="res-note">* Chưa bao gồm chi phí tránh thời gian chết máy (Downtime) và chi phí thay phốt/bơm mới</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: CONTACT & SAMPLE REQUEST -->
+      <section id="contact" class="section contact-section">
+        <div class="container contact-grid">
+          <div class="contact-info">
+            <span class="sub-heading">KẾT NỐI VỚI CHUYÊN GIA AI OIL</span>
+            <h2 class="section-title">Trải Nghiệm Mẫu Thử Miễn Phí Tại Nhà Máy</h2>
+            <p>
+              Đội ngũ kỹ sư cơ học & chuyên gia giải pháp bôi trơn AI OIL sẵn sàng mang thiết bị phân tích mẫu dầu lưu động đến tận nhà máy của bạn để kiểm tra và đối chiếu thực tế.
+            </p>
+
+            <div class="contact-perks">
+              <div class="perk-item">
+                <div class="p-icon">🧪</div>
+                <div>
+                  <strong>Miễn Phí 20 Lít Dầu Thử Nghiệm</strong>
+                  <p>Áp dụng cho doanh nghiệp sản xuất và nhà máy công nghiệp.</p>
+                </div>
+              </div>
+              <div class="perk-item">
+                <div class="p-icon">📊</div>
+                <div>
+                  <strong>Phân Tích Phổ Phân Tử Dầu Cũ (Oil Analysis)</strong>
+                  <p>Phát hiện kịp thời mạt kim loại và độ suy thoái của hệ thống bạn đang dùng.</p>
+                </div>
+              </div>
+              <div class="perk-item">
+                <div class="p-icon">🤝</div>
+                <div>
+                  <strong>Cam Kết Bảo Hiểm Thiết Bị Toàn Diện</strong>
+                  <p>Bảo chứng vận hành an toàn tuyệt đối với hợp đồng bảo hiểm chất lượng.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-box glass-card">
+            <h3>Đăng Ký Nhận Mẫu & Báo Giá Ưu Đãi</h3>
+            <form id="lead-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="lead-name">Họ và tên *</label>
+                  <input type="text" id="lead-name" placeholder="Nguyễn Văn An" required>
+                </div>
+                <div class="form-group">
+                  <label for="lead-phone">Số điện thoại *</label>
+                  <input type="tel" id="lead-phone" placeholder="0912 345 678" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="lead-company">Công ty / Nhà máy *</label>
+                  <input type="text" id="lead-company" placeholder="Công ty CP Chế Tạo Máy Á Châu" required>
+                </div>
+                <div class="form-group">
+                  <label for="lead-grade">Cấp độ nhớt quan tâm</label>
+                  <select id="lead-grade">
+                    <option value="AI OIL VG 46 (Phổ biến nhất)">AI OIL Hydro-X 46 (Phổ biến nhất)</option>
+                    <option value="AI OIL VG 32 (Máy chính xác, robot)">AI OIL Hydro-X 32 (Máy chính xác, robot)</option>
+                    <option value="AI OIL VG 68 (Tải nặng, nhiệt cao)">AI OIL Hydro-X 68 (Tải nặng, nhiệt cao)</option>
+                    <option value="Tư vấn khảo sát theo dòng máy">Cần chuyên gia tư vấn dòng máy cụ thể</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="lead-note">Yêu cầu đặc thù của hệ thống (nếu có)</label>
+                <textarea id="lead-note" rows="3" placeholder="Ví dụ: Máy ép 500 tấn nhiệt độ dầu thường xuyên trên 70 độ C..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary w-full glow-button btn-large">
+                <span>Gửi Yêu Cầu Tư Vấn & Mẫu Dầu</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+
+            <div id="form-success-msg" class="form-success-alert hidden">
+              <div class="alert-icon">✓</div>
+              <div>
+                <strong>Đăng ký thành công!</strong>
+                <p>Kỹ sư giải pháp AI OIL sẽ liên hệ với bạn trong vòng 15 phút.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-col-brand">
+          <div class="brand-logo">
+            <div class="logo-core">
+              <span class="logo-ring"></span>
+              <span class="logo-dot"></span>
+            </div>
+            <span class="brand-text">AI <strong>OIL</strong></span>
+          </div>
+          <p class="footer-desc">
+            Tiên phong ứng dụng trí tuệ nhân tạo và mô phỏng lượng tử vào ngành công nghiệp chất bôi trơn cao cấp.
+          </p>
+          <div class="tech-compliance">
+            <span>ISO 9001:2015</span> • <span>DIN 51524 Part 2 & 3</span> • <span>Vickers I-286-S</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Sản Phẩm</h5>
+          <a href="#products">AI OIL Hydro-X 32</a>
+          <a href="#products">AI OIL Hydro-X 46</a>
+          <a href="#products">AI OIL Hydro-X 68</a>
+          <a href="#simulation">Phòng Thử Nghiệm Ảo</a>
+        </div>
+
+        <div class="footer-col">
+          <h5>Công Nghệ</h5>
+          <a href="#about">Mô Phỏng Phân Tử AI</a>
+          <a href="#advantages">Triệt Tiêu Xâm Thực</a>
+          <a href="#advantages">Màng Gốm Nano Smart-Film</a>
+          <a href="#specs">Chỉ Số Độ Nhớt VI 170</a>
+        </div>
+
+        <div class="footer-col">
+          <h5>Liên Hệ Trực Tiếp</h5>
+          <p>📍 Trung Tâm R&D & Nhà Máy: KCN Công Nghệ Cao</p>
+          <p>📞 Hotline Kỹ Thuật: 1800-AIOIL (24/7)</p>
+          <p>✉️ Email: contact@aioil-tech.com</p>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <div>© 2026 AI OIL Corporation. Bản quyền thuộc về công nghệ bôi trơn AI OIL.</div>
+        <div class="footer-links">
+          <a href="#">Chính sách chất lượng</a>
+          <a href="#">Tiêu chuẩn MSDS</a>
+          <a href="#">Bảo mật thông tin</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- SCRIPT FILES -->
+  
+  <script>
+    // --- 1. INTRO ENGINE ---
+    /**
+ * AI OIL - Gemini Particle Intro & Sequential Letter Convergence Engine
+ * Generates an organic, slow-motion fluid particle field that converges
+ * into glyphs A -> I -> O -> I -> L with chromatic glows and synthetic audio.
+ */
+
+class GeminiIntroController {
+  constructor() {
+    this.canvas = document.getElementById('intro-canvas');
+    this.ctx = this.canvas ? this.canvas.getContext('2d') : null;
+    this.overlay = document.getElementById('intro-screen');
+    this.mainSite = document.getElementById('main-site');
+    this.progressBar = document.getElementById('intro-progress-fill');
+    this.subMessage = document.getElementById('intro-sub-message');
+    this.tagline = document.getElementById('intro-tagline');
+    this.soundToggleBtn = document.getElementById('btn-sound-toggle');
+    this.skipBtn = document.getElementById('btn-skip-intro');
+    this.replayBtn = document.getElementById('btn-replay-intro');
+
+    this.letterSlots = Array.from(document.querySelectorAll('.letter-slot'));
+
+    this.width = window.innerWidth;
+    this.height = window.innerHeight;
+    this.dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    // Particles config
+    this.particleCount = window.innerWidth < 768 ? 320 : 650;
+    this.particles = [];
+    this.animationId = null;
+
+    // Audio context for procedural ambient sound
+    this.audioCtx = null;
+    this.isMuted = false;
+
+    // Timeline states: 'DRIFT' -> 'CONVERGE' -> 'CRYSTALLIZED' -> 'FINISH'
+    this.state = 'DRIFT';
+    this.startTime = performance.now();
+    this.currentTime = 0;
+
+    // Sequence for letters: A -> I -> O -> I -> L
+    this.sequenceOrder = ['A', 'I', 'O', 'I', 'L'];
+    this.currentLetterIndex = -1;
+    this.letterTargets = []; // coordinate points extracted for letters
+
+    this.init();
+  }
+
+  init() {
+    if (!this.canvas || !this.ctx) return;
+    this.resize();
+    window.addEventListener('resize', () => this.resize());
+
+    // Generate initial fluid particle pool
+    this.createParticles();
+
+    // Map letter target coordinates on the canvas
+    this.generateLetterCoordinates();
+
+    // Setup event listeners
+    if (this.skipBtn) {
+      this.skipBtn.addEventListener('click', () => this.skipIntro());
+    }
+
+    if (this.replayBtn) {
+      this.replayBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.restartIntro();
+      });
+    }
+
+    if (this.soundToggleBtn) {
+      this.soundToggleBtn.addEventListener('click', () => this.toggleSound());
+    }
+
+    // Interactive mouse gravitation during drift phase
+    this.mouse = { x: this.width / 2, y: this.height / 2, active: false };
+    window.addEventListener('mousemove', (e) => {
+      this.mouse.x = e.clientX;
+      this.mouse.y = e.clientY;
+      this.mouse.active = true;
+    });
+
+    // Start render loop
+    this.startTime = performance.now();
+    this.loop();
+
+    // Schedule Convergence Timeline
+    this.timelineTimer = setTimeout(() => {
+      this.startLetterSequence();
+    }, 2800); // 2.8s of dreamy fluid drift, then convergence
+  }
+
+  resize() {
+    this.width = window.innerWidth;
+    this.height = window.innerHeight;
+    this.canvas.width = this.width * this.dpr;
+    this.canvas.height = this.height * this.dpr;
+    this.ctx.scale(this.dpr, this.dpr);
+    this.generateLetterCoordinates();
+  }
+
+  createParticles() {
+    this.particles = [];
+    // Color palette: electric cyan, golden amber, deep cosmic purple, pure glow white
+    const colors = [
+      { r: 64, g: 219, b: 255 }, // Cyan
+      { r: 108, g: 229, b: 255 }, // Bright cyan
+      { r: 245, g: 179, b: 1 },  // Golden Oil Amber
+      { r: 255, g: 213, b: 102 }, // Pale Gold
+      { r: 138, g: 92, b: 255 }, // Gemini Violet
+      { r: 255, g: 255, b: 255 }  // Stellar White
+    ];
+
+    for (let i = 0; i < this.particleCount; i++) {
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      this.particles.push({
+        x: Math.random() * this.width,
+        y: Math.random() * this.height,
+        vx: (Math.random() - 0.5) * 1.2,
+        vy: (Math.random() - 0.5) * 1.2,
+        radius: Math.random() * 2.5 + 1.2,
+        baseRadius: Math.random() * 2.5 + 1.2,
+        color: color,
+        alpha: Math.random() * 0.7 + 0.3,
+        seed: Math.random() * 1000,
+        flowSpeed: Math.random() * 0.001 + 0.0006,
+        targetX: null,
+        targetY: null,
+        targetLetter: null,
+        converged: false
+      });
+    }
+  }
+
+  /**
+   * Samples visual anchor points on the screen for the 5 letters:
+   * A (index 0), I (index 1), O (index 2), I (index 3), L (index 4)
+   */
+  generateLetterCoordinates() {
+    this.letterTargets = [[], [], [], [], []];
+    // Create an offscreen canvas to render letters and sample dense pixels
+    const offCanvas = document.createElement('canvas');
+    const offCtx = offCanvas.getContext('2d');
+    const sampleWidth = this.width;
+    const sampleHeight = this.height;
+    offCanvas.width = sampleWidth;
+    offCanvas.height = sampleHeight;
+
+    const chars = ['A', 'I', 'O', 'I', 'L'];
+    const letterRects = this.letterSlots.map(slot => slot.getBoundingClientRect());
+
+    chars.forEach((char, index) => {
+      offCtx.clearRect(0, 0, sampleWidth, sampleHeight);
+      const rect = letterRects[index];
+      if (!rect) return;
+
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2 + 10;
+      const fontSize = Math.min(rect.width * 1.3, 90);
+
+      offCtx.fillStyle = '#ffffff';
+      offCtx.font = `800 ${fontSize}px "Space Grotesk", "Plus Jakarta Sans", sans-serif`;
+      offCtx.textAlign = 'center';
+      offCtx.textBaseline = 'middle';
+      offCtx.fillText(char, centerX, centerY);
+
+      // Read raster pixels
+      const imgData = offCtx.getImageData(
+        Math.max(0, rect.left - 10),
+        Math.max(0, rect.top - 10),
+        rect.width + 20,
+        rect.height + 20
+      );
+
+      const pixels = imgData.data;
+      const step = 4; // sampling density
+      for (let y = 0; y < imgData.height; y += step) {
+        for (let x = 0; x < imgData.width; x += step) {
+          const pixelIndex = (y * imgData.width + x) * 4;
+          const alpha = pixels[pixelIndex + 3];
+          if (alpha > 140) {
+            this.letterTargets[index].push({
+              x: (rect.left - 10) + x,
+              y: (rect.top - 10) + y
+            });
+          }
+        }
+      }
+    });
+
+    // Distribute particles across letters
+    let targetIndex = 0;
+    this.particles.forEach((p, i) => {
+      const letterIndex = i % 5;
+      const list = this.letterTargets[letterIndex];
+      if (list && list.length > 0) {
+        const pt = list[Math.floor(Math.random() * list.length)];
+        p.targetX = pt.x;
+        p.targetY = pt.y;
+        p.targetLetter = letterIndex;
+      }
+    });
+  }
+
+  startLetterSequence() {
+    this.state = 'CONVERGE';
+    const stepDuration = 650; // time per letter in ms
+
+    // Sequential triggering: A -> I -> O -> I -> L
+    this.sequenceOrder.forEach((char, idx) => {
+      setTimeout(() => {
+        this.currentLetterIndex = idx;
+        this.highlightLetterSlot(idx);
+        this.playSynthesizedTone(idx);
+
+        // Update progress bar
+        if (this.progressBar) {
+          const pct = ((idx + 1) / this.sequenceOrder.length) * 100;
+          this.progressBar.style.width = `${pct}%`;
+        }
+
+        // When the final letter 'L' locks in
+        if (idx === this.sequenceOrder.length - 1) {
+          setTimeout(() => {
+            this.onAllLettersCrystallized();
+          }, 800);
+        }
+      }, idx * stepDuration);
+    });
+  }
+
+  highlightLetterSlot(index) {
+    if (this.letterSlots[index]) {
+      this.letterSlots[index].classList.add('converging');
+      setTimeout(() => {
+        this.letterSlots[index].classList.remove('converging');
+        this.letterSlots[index].classList.add('crystallized');
+      }, 250);
+    }
+  }
+
+  onAllLettersCrystallized() {
+    this.state = 'CRYSTALLIZED';
+    this.playChordFinale();
+
+    if (this.subMessage) {
+      this.subMessage.classList.add('show');
+    }
+    if (this.tagline) {
+      this.tagline.innerHTML = '<span class="pulsing-dot" style="background:#10f49c;box-shadow:0 0 10px #10f49c"></span><span class="tag-text" style="color:#10f49c">FORMULA SYNTHESIS COMPLETE</span>';
+    }
+
+    // Particle flash shockwave
+    this.particles.forEach(p => {
+      const angle = Math.atan2(p.y - this.height / 2, p.x - this.width / 2);
+      const force = Math.random() * 8 + 3;
+      p.burstVx = Math.cos(angle) * force;
+      p.burstVy = Math.sin(angle) * force;
+    });
+
+    // Auto transition to main site after celebrating the crystallized "AI OIL"
+    setTimeout(() => {
+      this.completeIntro();
+    }, 2000);
+  }
+
+  completeIntro() {
+    this.state = 'FINISH';
+    if (this.overlay) {
+      this.overlay.classList.add('fade-out');
+    }
+    if (this.mainSite) {
+      this.mainSite.classList.remove('hidden-initially');
+    }
+    document.body.classList.remove('intro-active');
+
+    // Trigger hero entrance reveals
+    setTimeout(() => {
+      if (window.triggerHeroEntrance) {
+        window.triggerHeroEntrance();
+      }
+    }, 300);
+
+    // Stop render loop to save CPU
+    setTimeout(() => {
+      if (this.animationId) {
+        cancelAnimationFrame(this.animationId);
+      }
+    }, 1300);
+  }
+
+  skipIntro() {
+    clearTimeout(this.timelineTimer);
+    this.completeIntro();
+  }
+
+  restartIntro() {
+    if (this.overlay) {
+      this.overlay.classList.remove('fade-out');
+    }
+    if (this.mainSite) {
+      this.mainSite.classList.add('hidden-initially');
+    }
+    document.body.classList.add('intro-active');
+
+    this.letterSlots.forEach(slot => {
+      slot.classList.remove('converging', 'crystallized');
+    });
+
+    if (this.subMessage) {
+      this.subMessage.classList.remove('show');
+    }
+    if (this.progressBar) {
+      this.progressBar.style.width = '0%';
+    }
+    if (this.tagline) {
+      this.tagline.innerHTML = '<span class="pulsing-dot"></span><span class="tag-text">SYNTHESIZING NEXT-GEN FORMULA</span>';
+    }
+
+    this.currentLetterIndex = -1;
+    this.state = 'DRIFT';
+    this.createParticles();
+    this.generateLetterCoordinates();
+    this.startTime = performance.now();
+
+    window.scrollTo({ top: 0, behavior: 'instant' });
+
+    this.loop();
+    this.timelineTimer = setTimeout(() => {
+      this.startLetterSequence();
+    }, 2000);
+  }
+
+  /* ---------------- SOUND SYNTHESIS (WEB AUDIO API) ---------------- */
+  initAudio() {
+    if (!this.audioCtx) {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (AudioCtx) {
+        this.audioCtx = new AudioCtx();
+      }
+    }
+    if (this.audioCtx && this.audioCtx.state === 'suspended') {
+      this.audioCtx.resume();
+    }
+  }
+
+  toggleSound() {
+    this.isMuted = !this.isMuted;
+    const soundOn = this.soundToggleBtn.querySelector('.icon-sound-on');
+    const soundOff = this.soundToggleBtn.querySelector('.icon-sound-off');
+    if (soundOn && soundOff) {
+      soundOn.classList.toggle('hidden', this.isMuted);
+      soundOff.classList.toggle('hidden', !this.isMuted);
+    }
+    if (!this.isMuted) {
+      this.initAudio();
+      this.playSynthesizedTone(0);
+    }
+  }
+
+  playSynthesizedTone(step) {
+    if (this.isMuted) return;
+    this.initAudio();
+    if (!this.audioCtx) return;
+
+    // Harmonic musical scale (Pentatonic high-tech crystal chime: C5, D5, F5, G5, A5, C6)
+    const freqs = [523.25, 587.33, 659.25, 783.99, 880.00, 1046.50];
+    const freq = freqs[step % freqs.length];
+
+    const osc = this.audioCtx.createOscillator();
+    const gain = this.audioCtx.createGain();
+
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(freq, this.audioCtx.currentTime);
+
+    // Subtle pitch rise
+    osc.frequency.exponentialRampToValueAtTime(freq * 1.05, this.audioCtx.currentTime + 0.35);
+
+    gain.gain.setValueAtTime(0.001, this.audioCtx.currentTime);
+    gain.gain.linearRampToValueAtTime(0.18, this.audioCtx.currentTime + 0.04);
+    gain.gain.exponentialRampToValueAtTime(0.0001, this.audioCtx.currentTime + 0.55);
+
+    osc.connect(gain);
+    gain.connect(this.audioCtx.destination);
+
+    osc.start();
+    osc.stop(this.audioCtx.currentTime + 0.6);
+  }
+
+  playChordFinale() {
+    if (this.isMuted) return;
+    this.initAudio();
+    if (!this.audioCtx) return;
+
+    // Rich triumphant resonance chord
+    const chord = [523.25, 659.25, 783.99, 1046.50];
+    chord.forEach((freq, i) => {
+      const osc = this.audioCtx.createOscillator();
+      const gain = this.audioCtx.createGain();
+      osc.type = i % 2 === 0 ? 'sine' : 'triangle';
+      osc.frequency.setValueAtTime(freq, this.audioCtx.currentTime);
+
+      gain.gain.setValueAtTime(0.001, this.audioCtx.currentTime);
+      gain.gain.linearRampToValueAtTime(0.08, this.audioCtx.currentTime + 0.08);
+      gain.gain.exponentialRampToValueAtTime(0.0001, this.audioCtx.currentTime + 1.2);
+
+      osc.connect(gain);
+      gain.connect(this.audioCtx.destination);
+
+      osc.start();
+      osc.stop(this.audioCtx.currentTime + 1.3);
+    });
+  }
+
+  /* ---------------- PARTICLE RENDER & PHYSICS LOOP ---------------- */
+  loop() {
+    const now = performance.now();
+    const elapsed = now - this.startTime;
+    this.currentTime = elapsed;
+
+    this.ctx.fillStyle = 'rgba(6, 8, 14, 0.28)'; // motion blur trail
+    this.ctx.fillRect(0, 0, this.width, this.height);
+
+    const time = elapsed * 0.0012;
+
+    this.particles.forEach(p => {
+      if (this.state === 'CRYSTALLIZED' && p.burstVx) {
+        // Slow outward dissipation
+        p.x += p.burstVx * 0.6;
+        p.y += p.burstVy * 0.6;
+        p.burstVx *= 0.94;
+        p.burstVy *= 0.94;
+        p.alpha = Math.max(0.1, p.alpha * 0.98);
+      } else if (this.state === 'CONVERGE' && p.targetLetter !== null && p.targetLetter <= this.currentLetterIndex) {
+        // Converge smoothly to designated letter target
+        const dx = p.targetX - p.x;
+        const dy = p.targetY - p.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        const ease = 0.085;
+        p.x += dx * ease;
+        p.y += dy * ease;
+
+        if (dist < 4) {
+          p.converged = true;
+          // Shimmer jitter around letter contour
+          p.x = p.targetX + (Math.random() - 0.5) * 1.5;
+          p.y = p.targetY + (Math.random() - 0.5) * 1.5;
+          p.radius = p.baseRadius * 1.25;
+          p.alpha = 0.95;
+        } else {
+          p.radius = p.baseRadius * 1.1;
+        }
+      } else {
+        // DRIFT PHASE: Organic Gemini-style curl flow
+        const flowAngle = Math.sin(p.x * 0.003 + time) + Math.cos(p.y * 0.003 + time * 0.8);
+        p.vx += Math.cos(flowAngle) * 0.08;
+        p.vy += Math.sin(flowAngle) * 0.08;
+
+        // Apply drag
+        p.vx *= 0.96;
+        p.vy *= 0.96;
+
+        p.x += p.vx;
+        p.y += p.vy;
+
+        // Wrap around screen boundaries
+        if (p.x < -20) p.x = this.width + 20;
+        if (p.x > this.width + 20) p.x = -20;
+        if (p.y < -20) p.y = this.height + 20;
+        if (p.y > this.height + 20) p.y = -20;
+
+        // Mouse light gravity
+        if (this.mouse.active) {
+          const mdx = this.mouse.x - p.x;
+          const mdy = this.mouse.y - p.y;
+          const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
+          if (mDist < 180 && mDist > 5) {
+            p.vx += (mdx / mDist) * 0.18;
+            p.vy += (mdy / mDist) * 0.18;
+          }
+        }
+      }
+
+      // Draw particle glowing orb
+      this.ctx.beginPath();
+      this.ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+
+      const grad = this.ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius * 2.5);
+      grad.addColorStop(0, `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, ${p.alpha})`);
+      grad.addColorStop(0.5, `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, ${p.alpha * 0.4})`);
+      grad.addColorStop(1, `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, 0)`);
+
+      this.ctx.fillStyle = grad;
+      this.ctx.fill();
+    });
+
+    if (this.state !== 'FINISH') {
+      this.animationId = requestAnimationFrame(() => this.loop());
+    }
+  }
+}
+
+// Global initialization
+window.addEventListener('DOMContentLoaded', () => {
+  window.geminiIntro = new GeminiIntroController();
+});
+
+
+    // --- 2. OIL DYNAMICS & LAB SIMULATION ---
+    /**
+ * AI OIL - Ambient Background & Molecular Rheology Simulator
+ * Visualizes fluid dynamics, nano-molecular bonding under extreme shear stress,
+ * and comparative hydraulic film stability.
+ */
+
+// ==================== 1. AMBIENT BACKGROUND CANVAS ====================
+class AmbientOilCanvas {
+  constructor() {
+    this.canvas = document.getElementById('ambient-canvas');
+    if (!this.canvas) return;
+    this.ctx = this.canvas.getContext('2d');
+    this.width = window.innerWidth;
+    this.height = window.innerHeight;
+    this.blobs = [];
+    this.init();
+  }
+
+  init() {
+    this.resize();
+    window.addEventListener('resize', () => this.resize());
+
+    // Create large organic color energy fields (cyan & golden oil amber)
+    this.blobs = [
+      { x: this.width * 0.2, y: this.height * 0.3, vx: 0.2, vy: 0.15, radius: 380, color: 'rgba(64, 219, 255, 0.07)' },
+      { x: this.width * 0.8, y: this.height * 0.4, vx: -0.15, vy: 0.2, radius: 420, color: 'rgba(245, 179, 1, 0.08)' },
+      { x: this.width * 0.5, y: this.height * 0.8, vx: 0.1, vy: -0.18, radius: 450, color: 'rgba(138, 92, 255, 0.05)' }
+    ];
+
+    this.render();
+  }
+
+  resize() {
+    this.width = window.innerWidth;
+    this.height = window.innerHeight;
+    this.canvas.width = this.width;
+    this.canvas.height = this.height;
+  }
+
+  render() {
+    this.ctx.clearRect(0, 0, this.width, this.height);
+
+    this.blobs.forEach(b => {
+      b.x += b.vx;
+      b.y += b.vy;
+
+      if (b.x < -100 || b.x > this.width + 100) b.vx *= -1;
+      if (b.y < -100 || b.y > this.height + 100) b.vy *= -1;
+
+      const grad = this.ctx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.radius);
+      grad.addColorStop(0, b.color);
+      grad.addColorStop(1, 'transparent');
+
+      this.ctx.fillStyle = grad;
+      this.ctx.beginPath();
+      this.ctx.arc(b.x, b.y, b.radius, 0, Math.PI * 2);
+      this.ctx.fill();
+    });
+
+    requestAnimationFrame(() => this.render());
+  }
+}
+
+// ==================== 2. INTERACTIVE MOLECULAR LAB SIMULATOR ====================
+class RheologySimulator {
+  constructor() {
+    this.canvas = document.getElementById('sim-canvas');
+    if (!this.canvas) return;
+    this.ctx = this.canvas.getContext('2d');
+
+    // Controls
+    this.inputPressure = document.getElementById('input-pressure');
+    this.inputTemp = document.getElementById('input-temp');
+    this.valPressure = document.getElementById('val-pressure');
+    this.valTemp = document.getElementById('val-temp');
+    this.metricFilm = document.getElementById('metric-film');
+    this.metricFriction = document.getElementById('metric-friction');
+    this.metricStatus = document.getElementById('metric-status');
+    this.checkCompare = document.getElementById('check-compare');
+
+    this.gradeButtons = document.querySelectorAll('.btn-grade');
+    this.currentGrade = 32;
+
+    this.width = this.canvas.parentElement.clientWidth || 600;
+    this.height = 320;
+    this.dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    // Simulation particle lattices
+    this.aiMolecules = [];
+    this.normalMolecules = [];
+    this.cavitationBubbles = [];
+
+    this.init();
+  }
+
+  init() {
+    this.resize();
+    window.addEventListener('resize', () => this.resize());
+
+    // Bind controls
+    if (this.inputPressure) {
+      this.inputPressure.addEventListener('input', () => this.updateSimulationParams());
+    }
+    if (this.inputTemp) {
+      this.inputTemp.addEventListener('input', () => this.updateSimulationParams());
+    }
+    if (this.checkCompare) {
+      this.checkCompare.addEventListener('change', () => this.resize());
+    }
+
+    this.gradeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        this.gradeButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        this.currentGrade = parseInt(btn.dataset.grade, 10);
+        this.updateSimulationParams();
+      });
+    });
+
+    this.setupMolecules();
+    this.updateSimulationParams();
+    this.render();
+  }
+
+  resize() {
+    const parent = this.canvas.parentElement;
+    this.width = parent ? parent.clientWidth : 600;
+    this.height = 320;
+    this.canvas.width = this.width * this.dpr;
+    this.canvas.height = this.height * this.dpr;
+    this.ctx.scale(this.dpr, this.dpr);
+    this.setupMolecules();
+  }
+
+  setupMolecules() {
+    this.aiMolecules = [];
+    this.normalMolecules = [];
+    this.cavitationBubbles = [];
+
+    const isSplit = this.checkCompare && this.checkCompare.checked;
+    const splitWidth = isSplit ? this.width / 2 : this.width;
+
+    // AI OIL Molecules (Golden amber lattice with cyan covalent bonds)
+    const countAI = Math.floor(splitWidth / 14);
+    for (let i = 0; i < countAI; i++) {
+      this.aiMolecules.push({
+        x: Math.random() * (splitWidth - 20) + 10,
+        y: Math.random() * (this.height - 40) + 20,
+        baseY: 0,
+        radius: 4,
+        vx: (Math.random() - 0.5) * 1.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        bonded: true,
+        phase: Math.random() * Math.PI * 2
+      });
+    }
+
+    // Normal Hydraulic Oil Molecules (Prone to shearing apart at high pressure)
+    if (isSplit) {
+      const startX = splitWidth;
+      const countNormal = Math.floor(splitWidth / 14);
+      for (let i = 0; i < countNormal; i++) {
+        this.normalMolecules.push({
+          x: startX + Math.random() * (splitWidth - 20) + 10,
+          y: Math.random() * (this.height - 40) + 20,
+          radius: 3.5,
+          vx: (Math.random() - 0.5) * 2.5,
+          vy: (Math.random() - 0.5) * 1.5,
+          broken: false
+        });
+      }
+    }
+  }
+
+  updateSimulationParams() {
+    const pressure = parseInt(this.inputPressure.value, 10);
+    const temp = parseInt(this.inputTemp.value, 10);
+
+    if (this.valPressure) this.valPressure.textContent = `${pressure} bar`;
+    if (this.valTemp) this.valTemp.textContent = `${temp} °C`;
+
+    // Dynamic AI Oil Film stability calculation based on real physics formula:
+    // AI OIL has VI ~ 168 and nano-shearing resistance
+    const tempFactor = Math.max(0, 1 - (temp - 60) * 0.0018);
+    const pressureFactor = Math.max(0, 1 - (pressure - 250) * 0.0003);
+    const gradeBoost = this.currentGrade === 68 ? 1.04 : (this.currentGrade === 46 ? 1.02 : 1.0);
+
+    const aiFilmHealth = Math.min(99.9, (98.8 * tempFactor * pressureFactor * gradeBoost)).toFixed(1);
+    const frictionDrop = (24 + (pressure / 500) * 12 + (temp > 80 ? 4 : 0)).toFixed(1);
+
+    if (this.metricFilm) this.metricFilm.textContent = `${aiFilmHealth}%`;
+    if (this.metricFriction) this.metricFriction.textContent = `-${frictionDrop}%`;
+
+    if (this.metricStatus) {
+      if (pressure > 420 && temp > 100) {
+        this.metricStatus.textContent = "Kích Hoạt Nano Shield";
+        this.metricStatus.className = "m-val highlight-gold";
+      } else if (temp < 0) {
+        this.metricStatus.textContent = "Lưu Động Lạnh Cực Tốt";
+        this.metricStatus.className = "m-val highlight-cyan";
+      } else {
+        this.metricStatus.textContent = "Cực Kỳ Ổn Định";
+        this.metricStatus.className = "m-val text-green";
+      }
+    }
+  }
+
+  render() {
+    this.ctx.clearRect(0, 0, this.width, this.height);
+
+    const pressure = parseInt(this.inputPressure ? this.inputPressure.value : 320, 10);
+    const temp = parseInt(this.inputTemp ? this.inputTemp.value : 75, 10);
+    const isSplit = this.checkCompare && this.checkCompare.checked;
+    const splitX = isSplit ? this.width / 2 : this.width;
+
+    // Background dividing line and headers if split
+    if (isSplit) {
+      this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+      this.ctx.lineWidth = 1;
+      this.ctx.setLineDash([4, 4]);
+      this.ctx.beginPath();
+      this.ctx.moveTo(splitX, 0);
+      this.ctx.lineTo(splitX, this.height);
+      this.ctx.stroke();
+      this.ctx.setLineDash([]);
+
+      // Headers
+      this.ctx.font = '700 11px "Space Grotesk", sans-serif';
+      this.ctx.fillStyle = '#f5b301';
+      this.ctx.fillText(`AI OIL VG ${this.currentGrade} (SMART-FILM)`, 20, 24);
+
+      this.ctx.fillStyle = '#ff6b81';
+      this.ctx.fillText('DẦU KHOÁNG TRUYỀN THỐNG (BỊ BẺ GÃY)', splitX + 20, 24);
+    } else {
+      this.ctx.font = '700 12px "Space Grotesk", sans-serif';
+      this.ctx.fillStyle = '#f5b301';
+      this.ctx.fillText(`CẤU TRÚC PHÂN TỬ AI OIL HYDRO-X ${this.currentGrade} ĐỘC QUYỀN`, 20, 24);
+    }
+
+    // Top and bottom metal friction plates (hydraulic piston surface)
+    const plateHeight = 28;
+    this.ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
+    this.ctx.fillRect(0, 0, this.width, plateHeight);
+    this.ctx.fillRect(0, this.height - plateHeight, this.width, plateHeight);
+
+    // Plate labels
+    this.ctx.font = '500 10px "Plus Jakarta Sans", sans-serif';
+    this.ctx.fillStyle = '#8e9bb5';
+    this.ctx.fillText('▲ BỀ MẶT THÉP BƠM PISTON / VAN SERVO (CHUYỂN ĐỘNG TRƯỢT)', 20, 18);
+    this.ctx.fillText('▼ THÀNH ỐNG XILANH THỦY LỰC', 20, this.height - 10);
+
+    const speedMod = 1 + (pressure / 250) * 0.8;
+
+    // 1. RENDER AI OIL LATTICE
+    // AI OIL forms cohesive molecular bonds (lines drawn between neighbor molecules)
+    for (let i = 0; i < this.aiMolecules.length; i++) {
+      for (let j = i + 1; j < this.aiMolecules.length; j++) {
+        const dx = this.aiMolecules[i].x - this.aiMolecules[j].x;
+        const dy = this.aiMolecules[i].y - this.aiMolecules[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < 45) {
+          this.ctx.beginPath();
+          this.ctx.moveTo(this.aiMolecules[i].x, this.aiMolecules[i].y);
+          this.ctx.lineTo(this.aiMolecules[j].x, this.aiMolecules[j].y);
+          this.ctx.strokeStyle = `rgba(64, 219, 255, ${(1 - dist / 45) * 0.45})`;
+          this.ctx.lineWidth = 1.2;
+          this.ctx.stroke();
+        }
+      }
+    }
+
+    // Render AI particles
+    this.aiMolecules.forEach(m => {
+      m.x += m.vx * speedMod;
+      m.y += Math.sin(m.phase) * 0.6;
+      m.phase += 0.04;
+
+      if (m.x < 15) m.vx = Math.abs(m.vx);
+      if (m.x > splitX - 15) m.vx = -Math.abs(m.vx);
+      if (m.y < plateHeight + 10) m.y = plateHeight + 10;
+      if (m.y > this.height - plateHeight - 10) m.y = this.height - plateHeight - 10;
+
+      this.ctx.beginPath();
+      this.ctx.arc(m.x, m.y, m.radius, 0, Math.PI * 2);
+      this.ctx.fillStyle = '#f5b301';
+      this.ctx.shadowColor = '#f5b301';
+      this.ctx.shadowBlur = 8;
+      this.ctx.fill();
+      this.ctx.shadowBlur = 0;
+    });
+
+    // 2. RENDER NORMAL OIL (If split)
+    if (isSplit) {
+      const breakThreshold = pressure > 280 || temp > 80;
+
+      this.normalMolecules.forEach(m => {
+        m.x += m.vx * speedMod * (breakThreshold ? 1.6 : 1);
+        m.y += m.vy * (breakThreshold ? 1.8 : 0.8);
+
+        if (m.x < splitX + 15) m.vx = Math.abs(m.vx);
+        if (m.x > this.width - 15) m.vx = -Math.abs(m.vx);
+        if (m.y < plateHeight + 10) { m.y = plateHeight + 10; m.vy *= -1; }
+        if (m.y > this.height - plateHeight - 10) { m.y = this.height - plateHeight - 10; m.vy *= -1; }
+
+        this.ctx.beginPath();
+        this.ctx.arc(m.x, m.y, m.radius, 0, Math.PI * 2);
+        this.ctx.fillStyle = breakThreshold ? '#ff4757' : '#95a5a6';
+        this.ctx.shadowColor = breakThreshold ? '#ff4757' : 'transparent';
+        this.ctx.shadowBlur = breakThreshold ? 6 : 0;
+        this.ctx.fill();
+        this.ctx.shadowBlur = 0;
+      });
+
+      // Spawn cavitation bubbles in normal oil section under high pressure
+      if (pressure > 300 && Math.random() < 0.15) {
+        this.cavitationBubbles.push({
+          x: splitX + Math.random() * (splitX - 30) + 15,
+          y: this.height - plateHeight - 10,
+          radius: Math.random() * 4 + 2,
+          vy: -(Math.random() * 2 + 1),
+          alpha: 0.8
+        });
+      }
+
+      // Update cavitation bubbles
+      for (let b = this.cavitationBubbles.length - 1; b >= 0; b--) {
+        const bubble = this.cavitationBubbles[b];
+        bubble.y += bubble.vy;
+        bubble.alpha -= 0.015;
+
+        this.ctx.beginPath();
+        this.ctx.arc(bubble.x, bubble.y, bubble.radius, 0, Math.PI * 2);
+        this.ctx.strokeStyle = `rgba(255, 71, 87, ${bubble.alpha})`;
+        this.ctx.lineWidth = 1;
+        this.ctx.stroke();
+
+        if (bubble.alpha <= 0 || bubble.y <= plateHeight + 15) {
+          // Micro-pitting spark
+          if (bubble.y <= plateHeight + 15) {
+            this.ctx.fillStyle = '#fffa65';
+            this.ctx.fillRect(bubble.x - 2, bubble.y - 2, 4, 4);
+          }
+          this.cavitationBubbles.splice(b, 1);
+        }
+      }
+    }
+
+    requestAnimationFrame(() => this.render());
+  }
+}
+
+// Instantiate on load
+window.addEventListener('DOMContentLoaded', () => {
+  window.ambientCanvas = new AmbientOilCanvas();
+  window.rheologySim = new RheologySimulator();
+});
+
+
+    // --- 3. APPLICATION LOGIC ---
+    /**
+ * AI OIL - Main Application Controller
+ * Handles scroll reveals, counter animations, ROI calculation,
+ * form submission, and UI interactions.
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  initHeader();
+  initCountersAndReveals();
+  initRoiCalculator();
+  initFormAndSampleButtons();
+  initMobileMenu();
+});
+
+/* ---------------- 1. STICKY HEADER & ACTIVE LINKS ---------------- */
+function initHeader() {
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+}
+
+/* ---------------- 2. SCROLL REVEALS & NUMBER COUNTERS ---------------- */
+function initCountersAndReveals() {
+  const revealItems = document.querySelectorAll('.reveal-item');
+
+  // Trigger hero entrance explicitly when intro ends
+  window.triggerHeroEntrance = () => {
+    revealItems.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add('revealed');
+      }, index * 120);
+    });
+    startNumberCounters();
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        // If element is a stat card container
+        if (entry.target.classList.contains('hero-stats-strip')) {
+          startNumberCounters();
+        }
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealItems.forEach(item => observer.observe(item));
+}
+
+let countersStarted = false;
+function startNumberCounters() {
+  if (countersStarted) return;
+  countersStarted = true;
+
+  const statNums = document.querySelectorAll('.stat-num');
+  statNums.forEach(num => {
+    const target = parseFloat(num.dataset.target);
+    const isDecimal = target % 1 !== 0;
+    const duration = 1800;
+    const startTime = performance.now();
+
+    function updateCounter(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out expo
+      const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+      const currentVal = ease * target;
+
+      num.textContent = isDecimal ? currentVal.toFixed(1) : Math.floor(currentVal);
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
+      } else {
+        num.textContent = isDecimal ? target.toFixed(1) : target;
+      }
+    }
+    requestAnimationFrame(updateCounter);
+  });
+}
+
+/* ---------------- 3. ROI SAVINGS CALCULATOR ---------------- */
+function initRoiCalculator() {
+  const inputMachines = document.getElementById('calc-machines');
+  const inputTank = document.getElementById('calc-tank');
+  const inputElec = document.getElementById('calc-elec');
+
+  const resOil = document.getElementById('roi-oil-savings');
+  const resElec = document.getElementById('roi-elec-savings');
+  const resTotal = document.getElementById('roi-total-savings');
+
+  if (!inputMachines || !inputTank || !inputElec) return;
+
+  function recalculate() {
+    const machines = Math.max(1, parseInt(inputMachines.value, 10) || 1);
+    const tank = Math.max(50, parseInt(inputTank.value, 10) || 100);
+    const elecPrice = Math.max(500, parseInt(inputElec.value, 10) || 2000);
+
+    // AI OIL extends drain interval 3X:
+    // Traditional oil: changed 2 times/year
+    // AI OIL: changed 0.67 times/year -> saves 1.33 oil changes/year
+    const avgOilPricePerLiter = 45000; // 45,000 VND / liter
+    const oilSavings = machines * tank * 1.33 * avgOilPricePerLiter;
+
+    // Power savings: 6% hydraulic motor efficiency boost
+    // Average 15kW motor running 4000h/year = 60,000 kWh * 6% = 3,600 kWh saved per machine
+    const kwhSavedPerMachine = 3600;
+    const totalElecSavings = machines * kwhSavedPerMachine * elecPrice;
+
+    const total = oilSavings + totalElecSavings;
+
+    function formatVND(val) {
+      return new Intl.NumberFormat('vi-VN').format(Math.round(val)) + ' VNĐ';
+    }
+
+    resOil.textContent = formatVND(oilSavings) + ' / năm';
+    resElec.textContent = formatVND(totalElecSavings) + ' / năm';
+    resTotal.textContent = formatVND(total);
+  }
+
+  [inputMachines, inputTank, inputElec].forEach(input => {
+    input.addEventListener('input', recalculate);
+  });
+
+  recalculate();
+}
+
+/* ---------------- 4. LEAD FORM & SAMPLE BUTTONS ---------------- */
+function initFormAndSampleButtons() {
+  const form = document.getElementById('lead-form');
+  const successAlert = document.getElementById('form-success-msg');
+  const gradeSelect = document.getElementById('lead-grade');
+  const sampleButtons = document.querySelectorAll('.request-sample-btn');
+
+  sampleButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const productName = btn.dataset.product;
+      if (gradeSelect) {
+        for (let i = 0; i < gradeSelect.options.length; i++) {
+          if (gradeSelect.options[i].text.includes(productName)) {
+            gradeSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Đang xác thực thông tin...</span>';
+
+      setTimeout(() => {
+        form.reset();
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        if (successAlert) {
+          successAlert.classList.remove('hidden');
+          setTimeout(() => {
+            successAlert.classList.add('hidden');
+          }, 8000);
+        }
+      }, 1000);
+    });
+  }
+}
+
+/* ---------------- 5. MOBILE DRAWER MENU ---------------- */
+function initMobileMenu() {
+  const toggle = document.getElementById('mobile-toggle');
+  const drawer = document.getElementById('mobile-drawer');
+  const links = document.querySelectorAll('.mob-link');
+
+  if (!toggle || !drawer) return;
+
+  toggle.addEventListener('click', () => {
+    drawer.classList.toggle('open');
+  });
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      drawer.classList.remove('open');
+    });
+  });
+}
+
+  </script>
+
+</body>
+</html>
