@@ -1,43 +1,64 @@
-# AI OIL — Dầu Thủy Lực Thế Hệ Mới (AI-Powered Hydraulic Oil)
+# aioil.vn – Website dầu thủy lực AIO AW 46, AW 68
 
-Trang giới thiệu sản phẩm dầu thủy lực thế hệ mới lấy cảm hứng từ ngôn ngữ thiết kế và trải nghiệm mở đầu của **Google Gemini** (Gemini Fluid Intro).
+Web nhiều trang, tĩnh, chạy trên **Cloudflare Workers** (static assets + 1 Worker nhỏ nhận form). Không cần framework; build bằng Node có sẵn.
 
-## 🌟 Ý tưởng & Điểm nhấn cốt lõi
+> Bản landing page cũ (HYDRO-X, Gemini intro) được giữ nguyên ở nhánh [`legacy-landing`](../../tree/legacy-landing).
 
-1. **Hiệu ứng Mở Đầu Chuẩn Phong Cách Gemini (Canvas Particle Intro)**:
-   - Khi vào trang web, người dùng được chào đón bằng không gian tối huyền ảo với các dòng hạt ánh sáng (quantum glow particles) chuyển động mượt mà trong chế độ slow-motion mô phỏng dòng chảy lượng tử.
-   - Các điểm sáng hội tụ tuần tự qua từng ký tự theo đúng kịch bản:
-     $$\mathbf{A} \longrightarrow \mathbf{I} \longrightarrow \mathbf{O} \longrightarrow \mathbf{I} \longrightarrow \mathbf{L}$$
-   - Hiệu ứng âm thanh tinh thể phát qua Web Audio API (không phụ thuộc file âm thanh ngoài).
-   - Thanh tiến trình tổng hợp công thức (Formula Synthesis) hoàn thành $100\%$ và mở ra khẩu hiệu: *"Áp dụng trí tuệ nhân tạo vào kết tinh những ưu điểm tốt nhất"*.
-   - Hiệu ứng nổ ánh sáng và chuyển tiếp êm ái vào trang chủ chính.
-
-2. **Giao Diện Trang Chủ & Sản Phẩm Đẳng Cấp**:
-   - **Hero Section**: Giọt dầu 3D kết hợp mạng nơ-ron phân tử (AI Molecular Synthesis), số liệu tăng trưởng nổi bật ($3\times$ Tuổi thọ, $-38\%$ Nhiệt ma sát, $99.9\%$ Chống mài mòn).
-   - **Phòng Thí Nghiệm Động Học Ảo (Virtual Rheology Lab)**: Thanh trượt trực quan điều chỉnh áp suất ($50 - 500\text{ bar}$) và nhiệt độ ($-10^\circ\text{C} - 130^\circ\text{C}$), so sánh trực tiếp cấu trúc phân tử AI OIL Smart-Film với dầu khoáng truyền thống bị rách màng dầu và sủi bọt xâm thực.
-   - **4 Cột Trụ Đột Phá**: Kéo dài chu kỳ thay dầu gấp 3 lần ($>8.000$ giờ TOST), triệt tiêu bọt khí dưới 2.5 phút, tiết kiệm điện năng 5 - 8%, tương thích mọi loại gioăng phốt.
-   - **Danh Mục Dòng Sản Phẩm**: AI OIL HYDRO-X 32, HYDRO-X 46, HYDRO-X 68 với mô hình chai công nghệ cao.
-   - **Bảng Chỉ Tiêu Kỹ Thuật Chi Tiết**: Tiêu chuẩn ASTM, DIN, Vickers so sánh trực quan.
-   - **Bộ Tính Toán Lợi Ích Kinh Tế (ROI Calculator)**: Tự động tính toán số tiền tiết kiệm điện năng và chi phí dầu hàng năm cho nhà máy.
-   - **Đăng Ký Nhận Mẫu 20L Miễn Phí**: Tự động chuyển cấp độ nhớt khi người dùng chọn dòng sản phẩm tương ứng.
-
-## 📁 Cấu trúc thư mục
+## Cấu trúc
 
 ```
-d:\JOB\AIOIL\
-├── index.html          # Khung HTML5 ngữ nghĩa và giao diện UI
-├── style.css           # Hệ thống Style Gemini Cosmic Dark, Glassmorphism & Keyframes
-├── canvas-intro.js     # Engine Canvas mô phỏng hạt hội tụ chữ A -> I -> O -> I -> L
-├── oil-simulation.js   # Phòng thí nghiệm động học phân tử & nền phát sáng Ambient
-├── app.js              # Xử lý tương tác, đếm số, tính toán ROI & form mẫu thử
-├── server.js           # Máy chủ xem trước Node.js thuần (Zero-dependency)
-└── README.md           # Hướng dẫn chi tiết
+src/site.json          # Thông tin doanh nghiệp, hotline, Zalo, email, GA4, tên miền
+src/pages/**.html      # Nội dung từng trang (khối <!--meta-->, <!--head--> + <main>)
+public/                # File tĩnh: CSS, JS, ảnh, PDF TDS/SDS, favicon, llms.txt
+worker/index.js        # Worker: redirect tên miền chính, POST /api/lead
+build.mjs              # Ghép layout chung, sinh dist/ + sitemap.xml + robots.txt
+wrangler.jsonc         # Cấu hình deploy (tên worker: aioilweb)
 ```
 
-## 🚀 Cách chạy ứng dụng
+## Lệnh
 
-Mở terminal tại thư mục dự án và chạy:
 ```bash
-node server.js
+npm install
+npm run build     # sinh dist/, in danh sách chỗ còn class="todo"
+npm run dev       # chạy thử tại http://localhost:8787
+npm run deploy    # build + deploy lên Cloudflare (cần `npx wrangler login`)
 ```
-Truy cập trình duyệt tại địa chỉ: **`http://localhost:3000/`**
+
+`wrangler deploy` tự chạy build trước (khai báo `build.command` trong `wrangler.jsonc`), nên deploy bằng Cloudflare Workers Builds (kết nối GitHub) chỉ cần lệnh deploy mặc định `npx wrangler deploy`.
+
+## Deploy lần đầu
+
+1. **Kết nối repo:** Cloudflare Dashboard → Workers & Pages → `aioilweb` → Settings → Builds → Connect GitHub `teamseohpvn/aioil`, nhánh `main`. Hoặc chạy `npm run deploy` từ máy.
+   Tên worker trong `wrangler.jsonc` là `aioilweb`, trùng với worker đang chạy tại `aioilweb.nhadat339shangdao.workers.dev`, nên deploy sẽ thay bản hiện tại. Đổi `name` nếu muốn deploy song song để xem trước.
+2. **Nhận form báo giá** (bắt buộc, không có thì form báo lỗi và hướng khách gọi hotline). Đặt ít nhất một trong hai:
+   - Telegram: tạo bot bằng @BotFather, lấy chat id, rồi
+     ```bash
+     npx wrangler secret put TELEGRAM_BOT_TOKEN
+     npx wrangler secret put TELEGRAM_CHAT_ID
+     ```
+   - Webhook (ví dụ Google Apps Script ghi Google Sheet): `npx wrangler secret put LEAD_WEBHOOK_URL`. Worker gửi JSON `{name, phone, company, product, pack, note, page, time}`.
+3. **Tên miền:** Workers → `aioilweb` → Settings → Domains & Routes → Add Custom Domain `aioil.vn` (và `www.aioil.vn`). Sau khi tên miền chạy, đặt `"CANONICAL_HOST": "aioil.vn"` trong `wrangler.jsonc` và deploy lại để mọi truy cập từ `*.workers.dev` và `www` được chuyển 301 về `https://aioil.vn`.
+4. **Đo lường:** điền mã GA4 (`G-XXXX`) vào `ga4` trong `src/site.json`. Web tự gửi sự kiện `generate_lead`, `click_call`, `click_zalo`, `download_tds`, `download_sds`, `chooser_result`.
+5. **Google Search Console + Bing Webmaster Tools:** thêm `aioil.vn`, gửi `https://aioil.vn/sitemap.xml`.
+
+## Trước khi quảng bá
+
+`npm run build` liệt kê các chỗ đánh dấu `class="todo"` cần doanh nghiệp bổ sung: người thẩm định kỹ thuật, đơn vị thử nghiệm, thời gian/phí giao hàng, tài khoản ngân hàng, chính sách đại lý, email, giờ làm việc. Email điền ở `src/site.json` sẽ tự hiện ở chân trang.
+
+Lưu ý về ảnh: `public/img/` dùng ảnh bao bì dựng sẵn. Nhãn trên ảnh vẫn in chữ "DIN 51524 PART 2 HLP" (web đã gỡ tuyên bố này vì TDS chưa có phép thử DIN) và nắp phuy 200 L ghi "18 L". Nên thay bằng ảnh chụp thật khi có.
+
+## Thêm trang mới
+
+Tạo `src/pages/<duong-dan>/index.html`:
+
+```html
+<!--meta
+{ "title": "…", "description": "…", "path": "/duong-dan/", "nav": "kien-thuc", "updated": "2026-11-01" }
+-->
+<!--head-->
+<script type="application/ld+json">{ … }</script>
+<!--/head-->
+<main> … </main>
+```
+
+Có thể dùng `{{phone}}`, `{{zalo}}`, `{{company}}`, `{{leadForm}}` (form báo giá), `{{leadForm:aw46}}`, `{{leadForm:dai-ly}}`. Trang tự vào sitemap.

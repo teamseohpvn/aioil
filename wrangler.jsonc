@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "aioilweb",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-01",
+  // wrangler deploy / wrangler dev tự chạy build trước
+  "build": { "command": "node build.mjs" },
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+    "run_worker_first": true
+  },
+  "vars": {
+    // Bỏ trống cho đến khi aioil.vn trỏ vào Worker này, rồi đặt "aioil.vn"
+    // để mọi truy cập từ *.workers.dev và www được chuyển 301 về tên miền chính.
+    "CANONICAL_HOST": ""
+  }
+  // Bí mật (đặt bằng `npx wrangler secret put <TÊN>` hoặc trong Dashboard):
+  //   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID  – nhận lead qua Telegram
+  //   LEAD_WEBHOOK_URL                      – (tuỳ chọn) Google Apps Script ghi Google Sheet
+}

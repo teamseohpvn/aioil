@@ -1,0 +1,13 @@
+{
+  "name": "aioil-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.152.0"
+  }
+}

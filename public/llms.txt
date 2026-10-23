@@ -1,0 +1,19 @@
+# AIO AI OIL
+
+> Dầu thủy lực chống mài mòn AIO AW 46 (ISO VG 46) và AIO AW 68 (ISO VG 68), xô 18 L và phuy 200 L. Sản xuất tại Việt Nam theo TCCS 01:2026/HTVINA. Đơn vị chịu trách nhiệm: Công ty Cổ phần Thương mại Dịch vụ HT VINA (MST 0801139564), 108 Thanh Bình, Lê Thanh Nghị, Hải Phòng. Hotline 0901 511 313. Nghiên cứu phát triển: AI LUBRICANT LAB.
+
+## Chất lượng
+- [Công bố chất lượng](https://aioil.vn/chat-luong/): tiêu chuẩn công bố, 14 chỉ tiêu, kiểm soát theo lô, tra cứu COA, phạm vi công bố
+- [Thông số AIO AW 46](https://aioil.vn/chat-luong/thong-so-ky-thuat-aio-aw-46/): 45,8 mm²/s ở 40 °C, VI 98, chớp cháy 210 °C
+- [Thông số AIO AW 68](https://aioil.vn/chat-luong/thong-so-ky-thuat-aio-aw-68/): 64,6 mm²/s ở 40 °C, 9,41 mm²/s ở 100 °C, VI 124, chớp cháy 230 °C
+- [Phiếu an toàn hóa chất](https://aioil.vn/chat-luong/phieu-an-toan-hoa-chat-sds/)
+- [Cách đọc phiếu kiểm nghiệm](https://aioil.vn/chat-luong/cach-doc-phieu-kiem-nghiem/)
+
+## Kiến thức
+- [Dầu thủy lực 46 và 68 khác nhau thế nào](https://aioil.vn/kien-thuc/dau-thuy-luc-46-va-68-khac-nhau/)
+
+## Tài liệu gốc
+- [TDS AIO AW 46 (PDF)](https://aioil.vn/tai-lieu/tds-aio-aw-46.pdf)
+- [TDS AIO AW 68 (PDF)](https://aioil.vn/tai-lieu/tds-aio-aw-68.pdf)
+- [SDS AIO AW 46 (PDF)](https://aioil.vn/tai-lieu/sds-aio-aw-46.pdf)
+- [SDS AIO AW 68 (PDF)](https://aioil.vn/tai-lieu/sds-aio-aw-68.pdf)
